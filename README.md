@@ -1,0 +1,1 @@
+This is just a page with Useful JS Snippets.

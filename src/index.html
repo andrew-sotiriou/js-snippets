@@ -65,15 +65,20 @@
 
 	<div id="array-foreach-container" class="code-container">
 		<p class="code-title">FOREACH</p>
-		<p class="code-reason">Use FOREACH </p>
+		<p class="code-reason">Use FOREACH when you want to run something on each element in an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			
+			const foreachNumsPre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 			<p class="pre-es6">Pre ES6:</p>
-			
+			foreachNumsPre.forEach(function(num, i, array) {
+				if (num%2 == 0){
+					array.splice(i,1);
+				}
+			});
 			<p class="pre-es6-output"></p>
 			<p class="post-es6">Post ES6:</p>
-			
+			const foreachNumsPost = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			foreachNumsPost.forEach( (num, i, array) => { if (num%2 == 0) array.splice(i,1) });
 			<p class="post-es6-output"></p>
 		</div>
 	</div>

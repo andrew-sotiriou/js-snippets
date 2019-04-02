@@ -15,26 +15,37 @@ h1, h2 {
 }
 
 h2 {
+	cursor: pointer;
 	margin-bottom: 2%;
 	text-decoration: underline;
 }
 
-.code-container {
-	background: lightgrey;
-	border: 1px solid darkslategrey;
-	margin: 0 5% 1%;
-	padding: 1% 2%;
+.section-container {
+	display: none;
+	margin: 0 5%;
 
-	p {
-		&.code-title {
-			font-size: 1.15em;
-		    font-weight: 600;
-		    padding-bottom: 0.5%;
-		    text-align: center;
-		}
+	&.active {
+		display: block;
+	}
 
-		&.code-snippet-example {
-			font-weight: 600;
+	.code-container {
+		background: lightgrey;
+		border: 1px solid darkslategrey;
+		margin-bottom: 1%;
+		/*margin: 0 5% 1%;*/
+		padding: 1% 2%;
+
+		p {
+			&.code-title {
+				font-size: 1.15em;
+			    font-weight: 600;
+			    padding-bottom: 0.5%;
+			    text-align: center;
+			}
+
+			&.code-snippet-example {
+				font-weight: 600;
+			}
 		}
 	}
 }

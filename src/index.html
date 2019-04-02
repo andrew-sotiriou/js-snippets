@@ -9,30 +9,41 @@
 <body>
 <h1>Page of Javascript Snippets</h1>
 
-<h2>Arrays</h2>
-<div class="code-container">
-	<p class="code-title">MAP</p>
-	<p class="code-reason">Use MAP when you want to perform the same action on every item in an array</p>
-	<div class="code-snippet">
-		<p class="code-snippet-example">Example:</p>
-		const numbers = [1, 2, 3, 4, 5];<br />
-		const squareNumbers = numbers.map(number => {
-		  return number * number;
-		});
-		<!--OUTPUT GOES HERE-->
+<h2 class="section-header">Arrays</h2>
+<div class="section-container">
+	<div class="code-container">
+		<p class="code-title">MAP</p>
+		<p class="code-reason">Use MAP when you want to perform the same action on every item in an array</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			const numbers = [1, 2, 3, 4, 5];<br />
+			const squareNumbers = numbers.map(number => { return number * number; });
+			<!--OUTPUT GOES HERE-->
+		</div>
+	</div>
+
+	<div class="code-container">
+		<p class="code-title">FILTER</p>
+		<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
+			const onlyNumbers = things.filter(thing => { return typeof thing === 'number'; });
+			<!--OUTPUT GOES HERE-->
+		</div>
 	</div>
 </div>
 
-<div class="code-container">
-	<p class="code-title">FILTER</p>
-	<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
-	<div class="code-snippet">
-		<p class="code-snippet-example">Example:</p>
-		const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
-		const onlyNumbers = things.filter(thing => {
-			return typeof thing === 'number';
-		});
-		<!--OUTPUT GOES HERE-->
+<h2 class="section-header">Objects</h2>
+<div class="section-container">
+	<div class="code-container">
+		<p class="code-title">FILLER</p>
+		<p class="code-reason">Use FILLER to fill up space</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			YOU ARE FILLER YOU ARE FILLER. CAUSE ARRAYS KILLED THE OBJECT STAR.
+			<!--OUTPUT GOES HERE-->
+		</div>
 	</div>
 </div>
 

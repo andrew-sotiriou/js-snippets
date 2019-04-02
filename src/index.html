@@ -11,25 +11,22 @@
 
 <h2 class="section-header">Arrays</h2>
 <div class="section-container">
-	<div class="code-container">
+	<div id="array-map-container" class="code-container">
 		<p class="code-title">MAP</p>
 		<p class="code-reason">Use MAP when you want to perform the same action on every item in an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			const numbers = [1, 2, 3, 4, 5];<br />
+			const numbers = [1, 2, 3, 4, 5];
 			<p class="pre-es6">Pre ES6:</p>
 			const squareNumbers = numbers.map(number => { return number * number; });
+			<p class="pre-es6-output"></p>
 			<p class="post-es6">Post ES6:</p>
 			const squareNumbers2 = numbers.map(number => number * number);
-			<!--OUTPUT GOES HERE-->
-			<!--
-			PRE:
-			POST: 
-			-->
+			<p class="post-es6-output"></p>
 		</div>
 	</div>
 
-	<div class="code-container">
+	<div id="array-filter-container" class="code-container">
 		<p class="code-title">FILTER</p>
 		<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
 		<div class="code-snippet">
@@ -37,13 +34,10 @@
 			const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
 			<p class="pre-es6">Pre ES6:</p>
 			const onlyNumbers = things.filter(thing => { return typeof thing === 'number'; });
+			<p class="pre-es6-output"></p>
 			<p class="post-es6">Post ES6:</p>
 			const onlyNumbers2 = thing.filter(thing => typeof thing === 'number');
-			<!--OUTPUT GOES HERE-->
-			<!--
-			PRE:
-			POST: 
-			-->
+			<p class="post-es6-output"></p>
 		</div>
 	</div>
 </div>

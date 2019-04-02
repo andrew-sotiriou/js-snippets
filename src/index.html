@@ -17,8 +17,15 @@
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
 			const numbers = [1, 2, 3, 4, 5];<br />
+			<p class="pre-es6">Pre ES6:</p>
 			const squareNumbers = numbers.map(number => { return number * number; });
+			<p class="post-es6">Post ES6:</p>
+			const squareNumbers2 = numbers.map(number => number * number);
 			<!--OUTPUT GOES HERE-->
+			<!--
+			PRE:
+			POST: 
+			-->
 		</div>
 	</div>
 
@@ -27,9 +34,16 @@
 		<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
+			const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+			<p class="pre-es6">Pre ES6:</p>
 			const onlyNumbers = things.filter(thing => { return typeof thing === 'number'; });
+			<p class="post-es6">Post ES6:</p>
+			const onlyNumbers2 = thing.filter(thing => typeof thing === 'number');
 			<!--OUTPUT GOES HERE-->
+			<!--
+			PRE:
+			POST: 
+			-->
 		</div>
 	</div>
 </div>

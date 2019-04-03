@@ -32,3 +32,18 @@ addValue(foreachNums, "array-foreach-container");
 const everyNums = [1, 50, 75, 200, 350, 525, 1000];
 let everyNumsValue = everyNums.every(num => num > 0);	
 addValue(everyNumsValue, "array-every-container");
+
+//Check Arrays for Non-Dups
+const nondupsList1 = [1,2,3,4,5,6,7];
+const nondupsList2 = [1,2,3,4];
+let nondupsMatchLoop = []; 
+
+for(var k=0; k<nondupsList1.length; k++){
+	if(nondupsList2.indexOf(nondupsList1[k])==-1) {
+		nondupsMatchLoop.push(nondupsList1[k]);
+	}
+}
+
+let nondupsMatchFilter = nondupsList1.filter(val => !nondupsList2.includes(val));
+addValue(nondupsMatchLoop, "array-nondups-container");
+addValue(nondupsMatchFilter, "array-nondups-container", "example-output2");

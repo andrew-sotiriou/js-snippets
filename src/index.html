@@ -72,6 +72,29 @@
 		</div>
 	</div>
 
+	<div id="array-nondups-container" class="code-container">
+		<p class="code-title">Check two arrays for non-duplicates</p>
+		<p class="code-reason">One way would have been to write a for loop and do a check with indexOf though we with the updated JS code as of ES6 we can use a filter and include method.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			//Arrays to check <br />
+			const nondupsList1 = [1,2,3,4,5,6,7];<br />
+			const nondupsList2 = [1,2,3,4];<br />
+			//ForLoop Array to push non-dups:<br />
+			let nondupsMatchLoop = []; <br />
+			//For Loop:<br />			
+			for(var k=0; k &#60; nondupsList1.length; k++) {<br />
+				if(nondupsList2.indexOf(nondupsList1[k])==-1) {<br />
+					nondupsMatchLoop.push(nondupsList1[k]);<br />
+				}<br />
+			} 
+			<p class="example-output"></p>
+			//Using Filter and Include methods:<br />
+			let nondupsMatchFilter = nondupsList1.filter(val => !nondupsList2.includes(val));
+			<p class="example-output2"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">Objects</h2>

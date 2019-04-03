@@ -103,9 +103,9 @@
 				let nondupsMatchLoop = []; <br />
 				//For Loop:<br />			
 				for(var k=0; k &#60; nondupsList1.length; k++) {<br />
-					if(nondupsList2.indexOf(nondupsList1[k])==-1) {<br />
-						nondupsMatchLoop.push(nondupsList1[k]);<br />
-					}<br />
+					<span class="indent-20">if(nondupsList2.indexOf(nondupsList1[k])==-1) {</span><br />
+						<span class="indent-40">nondupsMatchLoop.push(nondupsList1[k]);</span><br />
+					<span class="indent-20">}</span><br />
 				} 
 			</p>
 			<p class="code-output">Output:</p>
@@ -131,18 +131,18 @@
 			<p class="code-snippet-example">Example:</p>
 			<p class="code-snippet">
 				const playObject = {<br />
-					key1: "value1",<br />
-					key2: "value2",<br />
-					key3: "value3",<br />
-					key4: "value4",<br />
-					key5: "value5"<br />
+				<span class="indent-20">key1: "value1",</span><br />
+				<span class="indent-20">key2: "value2",</span><br />
+				<span class="indent-20">key3: "value3",</span><br />
+				<span class="indent-20">key4: "value4",</span><br />
+				<span class="indent-20">key5: "value5"</span><br />
 				}<br />
 				function objKeyArray(object){<br />
-					let keyArray=[];<br />
-					for (var key in object) {<br />
-						keyArray.push(key);<br />
-					}<br />
-					return keyArray;<br />
+					<span class="indent-20">let keyArray=[];</span><br />
+					<span class="indent-20">for (var key in object) {</span><br />
+						<span class="indent-40">keyArray.push(key);</span><br />
+					<span class="indent-20">}</span><br />
+					<span class="indent-20">return keyArray;</span><br />
 				}
 			</p>
 			<p class="code-output">Output:</p>
@@ -157,18 +157,18 @@
 			<p class="code-snippet-example">Example:</p>
 			<p class="code-snippet">
 				const playObject = {<br />
-					key1: "value1",<br />
-					key2: "value2",<br />
-					key3: "value3",<br />
-					key4: "value4",<br />
-					key5: "value5"<br />
+				<span class="indent-20">key1: "value1",</span><br />
+				<span class="indent-20">key2: "value2",</span><br />
+				<span class="indent-20">key3: "value3",</span><br />
+				<span class="indent-20">key4: "value4",</span><br />
+				<span class="indent-20">key5: "value5"</span><br />
 				}<br />
 				function objValueArray(object) {<br />
-					let valueArray=[];<br />
-					for (var key in object) {<br />
-						valueArray.push(object[key]);<br />
-					}<br />
-					return valueArray;<br />
+					<span class="indent-20">let valueArray=[];</span><br />
+					<span class="indent-20">for (var key in object) {</span><br />
+						<span class="indent-40">valueArray.push(object[key]);</span><br />
+					<span class="indent-20">}</span><br />
+					<span class="indent-20">return valueArray;</span><br />
 				}
 			</p>
 			<p class="code-output">Output:</p>
@@ -176,6 +176,6 @@
 		</div>
 	</div>
 </div>
-<!--add text-indent for code that needs tabs-->
+
 </body>
 </html>

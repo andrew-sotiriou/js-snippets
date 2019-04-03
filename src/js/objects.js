@@ -1,11 +1,11 @@
 import { addExampleValueToElement as addValue } from './writeValues.js'
 
 const playObject = {
-	key1: "value",
-	key2: "value",
-	key3: "value",
-	key4: "value",
-	key5: "value"
+	key1: "value1",
+	key2: "value2",
+	key3: "value3",
+	key4: "value4",
+	key5: "value5"
 }
 
 //Object Keys to Array Function

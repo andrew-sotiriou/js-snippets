@@ -14,10 +14,12 @@
 	<div id="array-map-container" class="code-container">
 		<p class="code-title">MAP</p>
 		<p class="code-reason">Use MAP when you want to perform the same action on every item in an array</p>
-		<div class="code-snippet">
+		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			const mapNumbers = [1, 2, 3, 4, 5];<br />
-			let mapValue = mapNumbers.map(number => number * number);
+			<p class="code-snippet">
+				const mapNumbers = [1, 2, 3, 4, 5];<br />
+				let mapValue = mapNumbers.map(number => number * number);
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -26,10 +28,12 @@
 	<div id="array-filter-container" class="code-container">
 		<p class="code-title">FILTER</p>
 		<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
-		<div class="code-snippet">
+		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			const filterThings = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
-			let filterOnlyNumbers = filterThings.filter(thing => typeof thing === 'number');
+			<p class="code-snippet">
+				const filterThings = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
+				let filterOnlyNumbers = filterThings.filter(thing => typeof thing === 'number');
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -38,17 +42,21 @@
 	<div id="array-reduce-container" class="code-container">
 		<p class="code-title">Reduce</p>
 		<p class="code-reason">Use REDUCE when you want to use the values in an existing array to create something new</p>
-		<div class="code-snippet example1">
+		<div class="code-snippet-container example1">
 			<p class="code-snippet-example">Example 1:</p>
-			const reduceNameArray = ['adam', 'nancy', 'damain', 'ramona', 'evan', 'wendy'];<br />
-			let reduceValue = reduceNameArray.reduce((acc, currVal) => { return acc + currVal[0] }, "");
+			<p class="code-snippet">
+				const reduceNameArray = ['adam', 'nancy', 'damain', 'ramona', 'evan', 'wendy'];<br />
+				let reduceValue = reduceNameArray.reduce((acc, currVal) => { return acc + currVal[0] }, "");
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
-		<div class="code-snippet example2">
+		<div class="code-snippet-container example2">
 			<p class="code-snippet-example">Example 2:</p>
-			const reduceNums = [1, 2, 3, 4,];<br />
-			let reduceSum = reduceNums.reduce((acc, val) => acc + val, 1);
+			<p class="code-snippet">
+				const reduceNums = [1, 2, 3, 4,];<br />
+				let reduceSum = reduceNums.reduce((acc, val) => acc + val, 1);
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example2-output"></p>
 		</div>
@@ -57,10 +65,12 @@
 	<div id="array-foreach-container" class="code-container">
 		<p class="code-title">FOREACH</p>
 		<p class="code-reason">Use FOREACH when you want to run something on each element in an array</p>
-		<div class="code-snippet">
+		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			let foreachNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br />
-			foreachNums.forEach( (num, i, array) => {if (num%2 == 0) array.splice(i,1)});
+			<p class="code-snippet">	
+				let foreachNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br />
+				foreachNums.forEach( (num, i, array) => {if (num%2 == 0) array.splice(i,1)});
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -69,10 +79,12 @@
 	<div id="array-every-container" class="code-container">
 		<p class="code-title">EVERY</p>
 		<p class="code-reason">Use EVERY if you want to return a boolean. Every will check every element and will evaluate to true if every element evaluates to true.</p>
-		<div class="code-snippet">
+		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			const everyNums = [1, 50, 75, 200, 350, 525, 1000];<br />
-			let everyNumsValue = everyNums.every(num => num > 0);	
+			<p class="code-snippet">
+				const everyNums = [1, 50, 75, 200, 350, 525, 1000];<br />
+				let everyNumsValue = everyNums.every(num => num > 0);	
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -81,23 +93,27 @@
 	<div id="array-nondups-container" class="code-container">
 		<p class="code-title">Check two arrays for non-duplicates</p>
 		<p class="code-reason">One way would have been to write a for loop and do a check with indexOf though we with the updated JS code as of ES6 we can use a filter and include method.</p>
-		<div class="code-snippet">
+		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			//Arrays to check <br />
-			const nondupsList1 = [1,2,3,4,5,6,7];<br />
-			const nondupsList2 = [1,2,3,4];<br />
-			//ForLoop Array to push non-dups:<br />
-			let nondupsMatchLoop = []; <br />
-			//For Loop:<br />			
-			for(var k=0; k &#60; nondupsList1.length; k++) {<br />
-				if(nondupsList2.indexOf(nondupsList1[k])==-1) {<br />
-					nondupsMatchLoop.push(nondupsList1[k]);<br />
-				}<br />
-			} 
+			<p class="code-snippet">
+				//Arrays to check <br />
+				const nondupsList1 = [1,2,3,4,5,6,7];<br />
+				const nondupsList2 = [1,2,3,4];<br />
+				//ForLoop Array to push non-dups:<br />
+				let nondupsMatchLoop = []; <br />
+				//For Loop:<br />			
+				for(var k=0; k &#60; nondupsList1.length; k++) {<br />
+					if(nondupsList2.indexOf(nondupsList1[k])==-1) {<br />
+						nondupsMatchLoop.push(nondupsList1[k]);<br />
+					}<br />
+				} 
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
-			//Using Filter and Include methods:<br />
-			let nondupsMatchFilter = nondupsList1.filter(val => !nondupsList2.includes(val));
+			<p class="code-snippet">
+				//Using Filter and Include methods:<br />
+				let nondupsMatchFilter = nondupsList1.filter(val => !nondupsList2.includes(val));
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>
 		</div>
@@ -113,20 +129,22 @@
 		<p class="code-reason">This is a function to take the keys in an Object and turn them into an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			const playObject = {<br />
-				key1: "value",<br />
-				key2: "value",<br />
-				key3: "value",<br />
-				key4: "value",<br />
-				key5: "value"<br />
-			}<br />
-			function objKeyArray(object){<br />
-				let keyArray=[];<br />
-				for (var key in object) {<br />
-					keyArray.push(key);<br />
+			<p class="code-snippet">
+				const playObject = {<br />
+					key1: "value1",<br />
+					key2: "value2",<br />
+					key3: "value3",<br />
+					key4: "value4",<br />
+					key5: "value5"<br />
 				}<br />
-				return keyArray;<br />
-			}
+				function objKeyArray(object){<br />
+					let keyArray=[];<br />
+					for (var key in object) {<br />
+						keyArray.push(key);<br />
+					}<br />
+					return keyArray;<br />
+				}
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -137,25 +155,27 @@
 		<p class="code-reason">This is a function to take the values in an Object and turn them into an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			const playObject = {<br />
-				key1: "value",<br />
-				key2: "value",<br />
-				key3: "value",<br />
-				key4: "value",<br />
-				key5: "value"<br />
-			}<br />
-			function objValueArray(object) {<br />
-				let valueArray=[];<br />
-				for (var key in object) {<br />
-					valueArray.push(object[key]);<br />
+			<p class="code-snippet">
+				const playObject = {<br />
+					key1: "value1",<br />
+					key2: "value2",<br />
+					key3: "value3",<br />
+					key4: "value4",<br />
+					key5: "value5"<br />
 				}<br />
-				return valueArray;<br />
-			}
+				function objValueArray(object) {<br />
+					let valueArray=[];<br />
+					for (var key in object) {<br />
+						valueArray.push(object[key]);<br />
+					}<br />
+					return valueArray;<br />
+				}
+			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
 	</div>
 </div>
-
+<!--add text-indent for code that needs tabs-->
 </body>
 </html>

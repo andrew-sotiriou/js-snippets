@@ -205,5 +205,38 @@
 	</div>
 </div>
 
+<h2 class="section-header">AJAX</h2>
+<div class="section-container">
+
+	<div id="ajax-original-container" class="code-container">
+		<p class="code-title">AJAX Evolution</p>
+		<p class="code-reason">Original AJAX request</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+				const xhr = new XMLHttpRequest;<br />
+				const url = "https://api.chucknorris.io/jokes/random";<br />
+				xhr.responseType = "json";<br />
+				xhr.onreadystatechange = function() {<br />
+				<span class="indent-20">if (xhr.readyState === XMLHttpRequest.DONE) {</span><br />
+					<span class="indent-40">if (xhr.status === 200) {</span><br />
+						<span class="indent-60">return xhr.response;</span><br />
+					<span class="indent-40">}</span><br />
+					<span class="indent-40">else {</span><br />
+						<span class="indent-60">return `Error ${xhr.status}`;</span><br />
+					<span class="indent-40">}<br />
+				<span class="indent-20">}<br />
+				};<br />
+				xhr.open('GET', url, true);<br />
+				xhr.send();
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+
+</div>
+
 </body>
 </html>

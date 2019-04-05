@@ -22,13 +22,12 @@ function objectToString(object) {
 }
 
 function getNorrisJoke(object) {
-	let emptyPTag = createParagraph(null, "response-container");
+	let divTag = createDiv("response-container");
 	let norrisImg = createImg(object.icon_url);
 	let norrisJoke = createParagraph(object.value);
-	//norrisJoke.appendChild(norrisImg);
-	emptyPTag.appendChild(norrisImg);
-	emptyPTag.appendChild(norrisJoke);
-	return emptyPTag;
+	divTag.appendChild(norrisImg);
+	divTag.appendChild(norrisJoke);
+	return divTag;
 }
 
 function createImg(imgURL, imgAlt = null, imgTitle = null){
@@ -43,11 +42,15 @@ function createImg(imgURL, imgAlt = null, imgTitle = null){
 function createParagraph(text, className = "output-text", url = null){
 	var	pTag = document.createElement("p");
 	pTag.setAttribute("class", className);
-	if (text != null) {
-		var pText = document.createTextNode(text);
-		pTag.appendChild(pText);
-	}
+	var pText = document.createTextNode(text);
+	pTag.appendChild(pText);
     return pTag;
+}
+
+function createDiv(className = "response-container"){
+	var	divTag = document.createElement("div");
+	divTag.setAttribute("class", className);
+    return divTag;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

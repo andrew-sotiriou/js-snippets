@@ -205,11 +205,11 @@
 	</div>
 </div>
 
-<h2 class="section-header">AJAX</h2>
+<h2 class="section-header">Network Calls</h2>
 <div class="section-container">
 
 	<div id="ajax-original-container" class="code-container">
-		<p class="code-title">AJAX Evolution</p>
+		<p class="code-title">Original AJAX</p>
 		<p class="code-reason">Original AJAX request</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
@@ -229,6 +229,111 @@
 				};<br />
 				xhr.open('GET', url, true);<br />
 				xhr.send();
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="ajax-fetch-container" class="code-container">
+		<p class="code-title">FETCH API</p>
+		<p class="code-reason">FETCH request. This is a sample GET request. This new method allows for an easy asynchronously way to get resources from the network.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			let fetchURL = "http://taco-randomizer.herokuapp.com/random/";<br />
+			fetch(fetchURL)<br />
+			.then(response => {<br />
+				<span class="indent-20">return response.json();</span><br />
+			})<br />
+			.then(data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			})<br />
+			.catch(error => {<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+</div>
+
+<h2 class="section-header">Promises</h2>
+<div class="section-container">
+
+	<div id="promises-simple-container" class="code-container">
+		<p class="code-title">Simple Promise</p>
+		<p class="code-reason">A Promise is an operation that hasn't completed yet but will in the future. Promises allow us to chain .then calls so that we can avoid the <a href="https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)">pyramid of doom</a>.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			let simplePromise = new Promise((resolve, reject) => {<br />
+				<span class="indent-20">let num = Math.random();</span><br />
+				<span class="indent-20">if (num &#60; .5 ){</span><br />
+					<span class="indent-40">resolve('This is a successful promise and makes us happy');</span><br />
+				<span class="indent-20">} </span><br />
+				<span class="indent-20">else {</span><br />
+					<span class="indent-40">reject('This is an unsuccessful promise and makes us sad');</span><br />
+				<span class="indent-20">}</span><br />
+			});<br />
+			simplePromise<br />
+				<span class="indent-20">.then((resolvedValue) => {</span><br />
+					<span class="indent-40">console.log(resolvedValue);</span><br />
+				<span class="indent-20">})</span><br />
+				<span class="indent-20">.catch((rejectionReason) => {</span><br />
+					<span class="indent-40">console.log(rejectionReason);</span><br />
+				<span class="indent-20">});</span><br />
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="promises-all-container" class="code-container">
+		<p class="code-title">Promise.ALL</p>
+		<p class="code-reason">Promise.all will allow you to run multiple promises async and will return once all of them have completed. NOTE: If one promise is rejected (errors out) .all will immediately reject with that error.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example Successful Promise.all:</p>
+			<p class="code-snippet">
+			Promise.all([<br />
+				<span class="indent-20">new Promise(resolve => setTimeout(() => resolve(1), 3000)),</span><br />
+				<span class="indent-20">new Promise(resolve => setTimeout(() => resolve(2), 2000)),</span><br />
+				<span class="indent-20">new Promise(resolve => setTimeout(() => resolve(3), 1000))</span><br />
+			])<br />
+			.then(values => doSomething(values))<br />
+			.catch(error => doSomething(error)); 
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+			<p class="code-snippet-example">Example Unsuccessful Promise.all:</p>
+			<p class="code-snippet">
+			Promise.all([<br />
+				<span class="indent-20">new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),</span><br />
+				<span class="indent-20">new Promise((resolve, reject) => setTimeout(() => reject(new Error("Whoops!")), 2000)),</span><br />
+				<span class="indent-20">new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000))</span><br />
+			])<br />
+			.then(values => doSomething(values))<br />
+			.catch(error => doSomething(error));<br />
+			</p>
+			<p class="code-output">Output:</p>
+			<p class="example-output2"></p>
+		</div>
+	</div>
+
+	<div id="promises-race-container" class="code-container">
+		<p class="code-title">Promise.RACE</p>
+		<p class="code-reason">Promise.race allows you to pass promises like .all BUT .race will return a resolve or reject based on the promise that finishes running first.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			Promise.race([<br />
+			  <span class="indent-20">new Promise(resolve => setTimeout(() => resolve(1), 3000)),</span><br />
+			  <span class="indent-20">new Promise(resolve => setTimeout(() => resolve(2), 2000)),</span><br />
+			  <span class="indent-20">new Promise(resolve => setTimeout(() => resolve(3), 1000))</span><br />
+			])<br />
+			.then(values => doSomething(error))<br />
+			.catch(error => doSomething(error));
 			</p>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>

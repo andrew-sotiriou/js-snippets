@@ -9,9 +9,12 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "norris":
 		valueToWrite = getNorrisJoke(object);
 		break;
+		case "taco":
+		valueToWrite = getTaco(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
-	};	
+	};
 	let writeValue = document.getElementById(elementID).getElementsByClassName(elementClass)[0];
 	writeValue.appendChild(valueToWrite);
 }
@@ -28,6 +31,12 @@ function getNorrisJoke(object) {
 	divTag.appendChild(norrisImg);
 	divTag.appendChild(norrisJoke);
 	return divTag;
+}
+
+function getTaco(object){
+	var taco = `${object.shell.name}, ${object.base_layer.name}, ${object.condiment.name}, ${object.mixin.name}, and ${object.seasoning.name}`;
+	let tacoTag = createParagraph(taco);
+	return tacoTag;
 }
 
 function createImg(imgURL, imgAlt = null, imgTitle = null){

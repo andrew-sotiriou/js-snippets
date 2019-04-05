@@ -7,3 +7,5 @@ import { arrays } from './arrays.js';
 import { objects } from './objects.js';
 
 import { ajaxCalls } from './ajaxCalls.js';
+
+import { promises } from './promises.js';

@@ -22,10 +22,13 @@ function objectToString(object) {
 }
 
 function getNorrisJoke(object) {
+	let emptyPTag = createParagraph(null, "response-container");
 	let norrisImg = createImg(object.icon_url);
 	let norrisJoke = createParagraph(object.value);
-	norrisJoke.appendChild(norrisImg);
-	return norrisJoke;
+	//norrisJoke.appendChild(norrisImg);
+	emptyPTag.appendChild(norrisImg);
+	emptyPTag.appendChild(norrisJoke);
+	return emptyPTag;
 }
 
 function createImg(imgURL, imgAlt = null, imgTitle = null){
@@ -37,11 +40,13 @@ function createImg(imgURL, imgAlt = null, imgTitle = null){
 	return imgTag; 
 }
 
-function createParagraph(text, url = null){
+function createParagraph(text, className = "output-text", url = null){
 	var	pTag = document.createElement("p");
-	pTag.setAttribute("class", "output-text");
-	var pText = document.createTextNode(text);
-	pTag.appendChild(pText);
+	pTag.setAttribute("class", className);
+	if (text != null) {
+		var pText = document.createTextNode(text);
+		pTag.appendChild(pText);
+	}
     return pTag;
 }
 

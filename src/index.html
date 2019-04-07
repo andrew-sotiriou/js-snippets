@@ -245,7 +245,8 @@
 			fetch(fetchURL)<br />
 			.then(response => {<br />
 				<span class="indent-20">return response.json();</span><br />
-			})<br />
+			},<br />
+			networkError => { doSomething(networkError.message); })<br />
 			.then(data => {<br />
 				<span class="indent-20">doSomething(data);</span><br />
 			})<br />

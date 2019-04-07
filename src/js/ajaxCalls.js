@@ -23,7 +23,8 @@ let fetchURL = "http://taco-randomizer.herokuapp.com/random/";
 fetch(fetchURL)
 .then(response => {
 	return response.json();
-})
+},
+networkError => { procCall(networkError.message, "taco", "ajax-fetch-container"); })
 .then(data => {
 	procCall(data, "taco", "ajax-fetch-container");
 })

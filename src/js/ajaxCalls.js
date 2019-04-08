@@ -33,16 +33,23 @@ networkError => { procCall(networkError.message, "taco", "ajax-fetch-container")
 });
 
 //Fetch POST
-/*let data = {
-    name: 'Sara'
+let fetchPOSTurl = "https://reqres.in/api/users";
+
+let fetchPostData = {
+    method: 'POST',
+    body: {
+		name: "Bilbo Baggins",
+		movies: ["Fellowship of the Ring"]
+	}
 }
-// The parameters we are gonna pass to the fetch function
-let fetchData = { 
-    method: 'POST', 
-    body: data,
-    headers: new Headers()
-}
-fetch(url, fetchData)
-.then(function() {
-    // Handle response you get from the server
-});*/
+fetch(fetchPOSTurl, fetchPostData)
+.then(response => {
+	return response.json();
+},
+networkError => { procCall(networkError.message, "createUser", "ajax-fetchpost-container"); })
+.then(data => {
+	procCall(data, "createUser", "ajax-fetchpost-container");
+})
+.catch(error => {
+	addValue(error, "ajax-fetchpost-container");
+});

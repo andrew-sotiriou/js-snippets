@@ -17,6 +17,9 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "createUser":
 		valueToWrite = getUserInfo(object);
 		break;
+		case "numbers":
+		valueToWrite = getNumbers(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
 	};
@@ -48,6 +51,11 @@ function getUserInfo(object){
 	let userInfo = `The user's id is ${object.id} and the user was created on ${object.createdAt}`;
 	let userInfoParagraph = createParagraph(userInfo);
 	return userInfoParagraph;
+}
+
+function getNumbers(string){
+	let numbersParagraph = createParagraph(string);
+	return numbersParagraph;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

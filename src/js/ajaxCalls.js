@@ -53,3 +53,21 @@ networkError => { procCall(networkError.message, "createUser", "ajax-fetchpost-c
 .catch(error => {
 	addValue(error, "ajax-fetchpost-container");
 });
+
+
+//Exportable Fetch GET API Call
+function fecthGetExport(exportableUrl, callType, container){
+	fetch(exportableUrl)
+	.then(response => {
+		return response.json();
+	},
+	networkError => { procCall(networkError.message, callType, container); })
+	.then(data => {
+		procCall(data, callType, container);
+	})
+	.catch(error => {
+		addValue(error, container);
+	});
+}
+
+export {fecthGetExport};

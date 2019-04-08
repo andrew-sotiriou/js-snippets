@@ -1,4 +1,5 @@
 import { addExampleValueToElement as addValue } from './writeValues.js'
+import { fecthGetExport as fetchCall } from './ajaxCalls.js'
 
 //Simple Promise
 let simplePromise = new Promise((resolve, reject) => {

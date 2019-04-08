@@ -17,7 +17,7 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': '*',
     },
-    https: false,
+    https: true,
     open: true
   },
   plugins: [

@@ -258,6 +258,38 @@
 			<p class="example-output"></p>
 		</div>
 	</div>
+
+	<div id="ajax-fetchpost-container" class="code-container">
+		<p class="code-title">FETCH POST API</p>
+		<p class="code-reason">FETCH POST request. This is a sample POST request. This new method allows for an easy asynchronously way to get resources from the network.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			let fetchPOSTurl = "https://reqres.in/api/users";<br />
+			let fetchPostData = {<br />
+				<span class="indent-20">method: 'POST',</span><br />
+				<span class="indent-20">body: {</span><br />
+					<span class="indent-40">name: "Bilbo Baggins",</span><br />
+					<span class="indent-40">movies: ["Fellowship of the Ring"]</span><br />
+				<span class="indent-20">}</span><br />
+			}<br />
+			fetch(fetchPOSTurl, fetchPostData)<br />
+			.then(response => {<br />
+				<span class="indent-20">return response.json();</span><br />
+			},<br />
+			networkError => { doSomething(networkError.message); })<br />
+			.then(data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			})<br />
+			.catch(error => {<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">Promises</h2>

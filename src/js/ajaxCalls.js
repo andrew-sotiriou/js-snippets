@@ -19,7 +19,7 @@ xhr.open('GET', url, true);
 xhr.send();
 
 //Fetch GET
-let fetchURL = "http://taco-randomizer.herokuapp.com/random/";
+let fetchURL = "https://taco-randomizer.herokuapp.com/random/";
 fetch(fetchURL)
 .then(response => {
 	return response.json();
@@ -65,7 +65,7 @@ const fetchAsync = async (fetchAsynURL) => {
 	return data;
 };
 
-fetchAsync('http://numbersapi.com/random/trivia')
+fetchAsync('https://numbersapi.com/random/trivia')
 .then(data => {
 	procCall(data, "numbers", "ajax-asyncawait-container");
 })

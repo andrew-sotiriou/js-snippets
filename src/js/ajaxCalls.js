@@ -53,3 +53,49 @@ networkError => { procCall(networkError.message, "createUser", "ajax-fetchpost-c
 .catch(error => {
 	addValue(error, "ajax-fetchpost-container");
 });
+
+//Fetch ASYNC/AWAIT
+
+const fetchAsync = async (fetchAsynURL) => {
+	const response = await fetch(fetchAsynURL);
+	if (!response.ok) {
+		throw new Error('Request failed!');
+	}
+	const data = await response.text();
+	return data;
+};
+
+fetchAsync('http://numbersapi.com/random/trivia')
+.then(data => {
+	procCall(data, "numbers", "ajax-asyncawait-container");
+})
+.catch(error => {
+	addValue(error, "ajax-asyncawait-container");
+});
+
+
+//Fetch ASYNC/AWAIT POST
+const fetchAsyncPOST = async (fetchAsyncPOSTURL, options) => {
+	const response = await fetch(fetchAsyncPOSTURL, options);
+	if (!response.ok) {
+		throw new Error('Request failed!');
+	}
+	const data = await response.json();
+	return data;
+};
+
+let postOptions = {
+    method: 'POST',
+    body: {
+		name: "Geddy Lee",
+		bands: ["RUSH"]
+	}
+};
+
+fetchAsyncPOST('https://reqres.in/api/users', postOptions)
+.then(data => {
+	procCall(data, "createUser", "ajax-asyncawaitpost-container");
+})
+.catch(error => {
+	addValue(error, "ajax-asyncawaitpost-container");
+});

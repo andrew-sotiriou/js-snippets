@@ -14,6 +14,9 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "taco":
 		valueToWrite = getTaco(object);
 		break;
+		case "createUser":
+		valueToWrite = getUserInfo(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
 	};
@@ -36,9 +39,15 @@ function getNorrisJoke(object) {
 }
 
 function getTaco(object){
-	var taco = `${object.shell.name}, ${object.base_layer.name}, ${object.condiment.name}, ${object.mixin.name}, and ${object.seasoning.name}`;
+	let taco = `${object.shell.name}, ${object.base_layer.name}, ${object.condiment.name}, ${object.mixin.name}, and ${object.seasoning.name}`;
 	let tacoTag = createParagraph(taco);
 	return tacoTag;
+}
+
+function getUserInfo(object){
+	let userInfo = `The user's id is ${object.id} and the user was created on ${object.createdAt}`;
+	let userInfoParagraph = createParagraph(userInfo);
+	return userInfoParagraph;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

@@ -9,3 +9,5 @@ import { objects } from './objects.js';
 import { ajaxCalls } from './ajaxCalls.js';
 
 import { promises } from './promises.js';
+
+import { functions } from './otherFunctions.js';

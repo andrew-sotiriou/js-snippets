@@ -290,6 +290,67 @@
 		</div>
 	</div>
 
+	<div id="ajax-asyncawait-container" class="code-container">
+		<p class="code-title">FETCH Async/Await</p>
+		<p class="code-reason">FETCH Get request with async/await. This is a sample Get request using async/await.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			const fetchAsync = async (fetchAsynURL) => {<br />
+				<span class="indent-20">const response = await fetch(fetchAsynURL);</span><br />
+				<span class="indent-20">if (!response.ok) {</span><br />
+					<span class="indent-40">throw new Error('Request failed!');</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">const data = await response.text();</span><br />
+				<span class="indent-20">return data;</span><br />
+			};<br />
+			fetchAsync('http://numbersapi.com/random/trivia')<br />
+			.then(data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			})<br />
+			.catch(error => {<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="ajax-asyncawaitpost-container" class="code-container">
+		<p class="code-title">FETCH POST Async/Await</p>
+		<p class="code-reason">FETCH POST request with async/await. This is a sample Post request using async/await.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			const fetchAsyncPOST = async (fetchAsyncPOSTURL, options) => {<br />
+				<span class="indent-20">const response = await fetch(fetchAsyncPOSTURL, options);</span><br />
+				<span class="indent-20">if (!response.ok) {</span><br />
+					<span class="indent-40">throw new Error('Request failed!');</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">const data = await response.json();</span><br />
+				<span class="indent-20">return data;</span><br />
+			};<br />
+			let postOptions = {<br />
+				<span class="indent-20">method: 'POST',</span><br />
+				<span class="indent-20">body: {</span><br />
+					<span class="indent-40">name: "Geddy Lee",</span><br />
+					<span class="indent-40">bands: ["RUSH"]</span><br />
+				<span class="indent-20">}</span><br />
+			};<br />
+			fetchAsyncPOST('https://reqres.in/api/users', postOptions)<br />
+			.then(data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			})<br />
+			.catch(error => {<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
+			</p>
+			<p class="code-output">Response Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">Promises</h2>

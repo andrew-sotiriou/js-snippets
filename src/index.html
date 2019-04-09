@@ -304,7 +304,7 @@
 				<span class="indent-20">const data = await response.text();</span><br />
 				<span class="indent-20">return data;</span><br />
 			};<br />
-			fetchAsync('https://numbersapi.com/random/trivia')<br />
+			fetchAsync('http://numbersapi.com/random/trivia')<br />
 			.then(data => {<br />
 				<span class="indent-20">doSomething(data);</span><br />
 			})<br />
@@ -456,6 +456,50 @@
 				<span class="indent-20">doSomething(age);</span><br />
 			}<br />
 			getAge('01/01/1980');
+			</p>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="other-name-container" class="code-container">
+		<p class="code-title">Name Check</p>
+		<p class="code-reason">Simple Function to check a persons name meets the Regex Criteria</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			function checkName(name){<br /> 
+				<span class="indent-20">var regex = /^[a-zA-x]{2,30}$/;</span><br />
+				<span class="indent-20">if( !((name != null && name != undefined) && regex.test(name)) ){</span><br />
+					<span class="indent-40">doSomething('Invalid Name');</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">else {</span><br />
+					<span class="indent-40">doSomething('Valid Name');</span><br />
+				<span class="indent-20">}</span><br />
+			}<br />
+			checkName('andrew');
+			</p>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="other-url-container" class="code-container">
+		<p class="code-title">URL Check</p>
+		<p class="code-reason">Simple Function to check that a URL meets the Regex Criteria</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			function checkURL(url){<br />
+				<span class="indent-20">var regex = /^(ftp|http|https):\/\/[^ "]+$/;</span><br />
+				<span class="indent-20">if ( !((url != null && url != undefined) && regex.test(url)) ) {</span><br />
+					<span class="indent-40">doSomething('Invalid URL');</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">else {</span><br />
+					<span class="indent-40">doSomething('Valid URL');</span><br />
+				<span class="indent-20">}</span><br />
+			}<br />
+			checkURL('http://www.google.com');
 			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>

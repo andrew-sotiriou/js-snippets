@@ -3,10 +3,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    jquery: './src/js/jquery.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/index.bundle.js'
+    filename: 'js/[name].bundle.js'
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -29,7 +32,8 @@ module.exports = {
       template: 'src/index.html'
     }),
     new HtmlWebpackPlugin({
-      inject: false,
+      inject: true,
+      chunks: ['jquery'],
       filename: 'jquery.html',
       template: 'src/jquery.html'
     }),

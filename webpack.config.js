@@ -25,7 +25,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       chunks: ['main'],
-      template: 'src/index.html',
+      filename: 'index.html',
+      template: 'src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: 'jquery.html',
+      template: 'src/jquery.html'
     }),
   ],
   module: {

@@ -65,7 +65,7 @@ const fetchAsync = async (fetchAsynURL) => {
 	return data;
 };
 
-fetchAsync('https://numbersapi.com/random/trivia')
+fetchAsync('http://numbersapi.com/random/trivia')
 .then(data => {
 	procCall(data, "numbers", "ajax-asyncawait-container");
 })

@@ -12,3 +12,11 @@ $.ajax({
 }).fail(function(error){
 	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-ajaxget-container");
 });
+
+
+//Updated GET CALL
+$.get('https://restcountries.eu/rest/v2/name/france', data => {
+    procCall(data, "country", "jquery-updatedget-container");
+}).fail( error => {
+	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-updatedget-container"); 
+});

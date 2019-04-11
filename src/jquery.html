@@ -14,12 +14,21 @@
 
 <h2 class="section-header">JQuery AJAX</h2>
 <div class="section-container">
-	<div id="jquery-ajax-container" class="code-container">
-		<p class="code-title">JQUERY AJAX</p>
-		<p class="code-reason">JQUERY AJAX</p>
+	<div id="jquery-ajaxget-container" class="code-container">
+		<p class="code-title">JQUERY AJAX GET</p>
+		<p class="code-reason">This is a simple JQuery AJAX Get call.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
 			<p class="code-snippet">
+			$.ajax({<br />
+				<span class="indent-20">url:"https://restcountries.eu/rest/v2/name/cyprus",</span><br />
+				<span class="indent-20">type: "GET",</span><br />
+				<span class="indent-20">dataType: 'json'</span><br />
+			}).done(function(data){<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			}).fail(function(error){<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
 			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>

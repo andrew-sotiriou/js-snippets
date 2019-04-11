@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="go-back">
-	<a href="/">Go Back!</a>
+	<a href="./">Go Back!</a>
 </div>
 
 <h2 class="section-header">JQuery AJAX</h2>
@@ -34,6 +34,24 @@
 			<p class="example-output"></p>
 		</div>
 	</div>
+
+	<div id="jquery-updatedget-container" class="code-container">
+		<p class="code-title">JQUERY GET Call</p>
+		<p class="code-reason">This is a simple JQuery using an updated GET CALL. This is a step up from the lower level called utilized in the above snippet.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<p class="code-snippet">
+			$.get('https://restcountries.eu/rest/v2/name/france', data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			}).fail( error => {<br />
+				<span class="indent-20">doSomething(error);</span><br />
+			});
+			</p>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 

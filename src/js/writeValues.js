@@ -20,6 +20,9 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "numbers":
 		valueToWrite = getNumbers(object);
 		break;
+		case "country":
+		valueToWrite = getCountryInfo(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
 	};
@@ -56,6 +59,16 @@ function getUserInfo(object){
 function getNumbers(string){
 	let numbersParagraph = createParagraph(string);
 	return numbersParagraph;
+}
+
+function getCountryInfo(object) {
+	let divTag = createDiv("response-container");
+	let flagImg = createImg(object[0].flag);
+	let countryText = `The country is ${object[0].name} and the capital is ${object[0].capital}`;
+	let contryInfo = createParagraph(countryText);
+	divTag.appendChild(flagImg);
+	divTag.appendChild(contryInfo);
+	return divTag;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

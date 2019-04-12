@@ -26,6 +26,9 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "register":
 		valueToWrite = getRegsiterToken(object);
 		break;
+		case "klingon":
+		valueToWrite = getTranslation(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
 	};
@@ -77,6 +80,11 @@ function getCountryInfo(object){
 function getRegsiterToken(object){
 	let regsiterToken = createParagraph(`The register token is ${object.token}`);
 	return regsiterToken;
+}
+
+function getTranslation(object){
+	let translationParagraph = createParagraph(`${object.contents.translated}`);
+	return translationParagraph;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

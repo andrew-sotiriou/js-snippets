@@ -22,10 +22,14 @@ $.get('https://restcountries.eu/rest/v2/name/france', data => {
 });
 
 //GET JSON CALL
-/*let textToConvert = "Hello. My name is Inigo Montoya. You killed my father. Prepare to die.";
-$.getJSON("https://api.funtranslations.com/translate/klingon.json?text="+textToConvert, function(result){
-	console.log(result);
-});*/
+
+$.getJSON("https://api.funtranslations.com/translate/klingon.json?", {
+	text: "Hello. My name is Inigo Montoya. You killed my father. Prepare to die."
+}).done(data => {
+	procCall(data, "klingon", "jquery-getjson-container");
+}).fail(error => {
+	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-getjson-container");
+});
 
 //POST CALL
 let JQPostData = {

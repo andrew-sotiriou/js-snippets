@@ -103,6 +103,15 @@
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
 			<p class="code-snippet">
+			let JQPostData2 = {<br />
+				<span class="indent-20">name: "WinnieThePooh",</span><br />
+				<span class="indent-20">loves: "honey"</span><br />
+			};<br />
+			$.post('https://reqres.in/api/users', JQPostData2).done(data => {<br />
+				<span class="indent-20">doSomething(data);</span><br />
+			}).fail( error => {<br />
+				<span class="indent-20">doSomething(error); </span><br />
+			});<br />
 			</p>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>

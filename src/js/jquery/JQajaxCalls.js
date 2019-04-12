@@ -47,3 +47,15 @@ $.ajax({
 }).fail(error => {
 	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-post-container"); 
 });
+
+//Updated POST CALL
+let JQPostData2 = {
+	name: "WinnieThePooh",
+	loves: "honey"
+};
+
+$.post('https://reqres.in/api/users', JQPostData2).done(data => {
+    procCall(data, "createUser", "jquery-updatedpost-container");
+}).fail( error => {
+	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-updatedpost-container"); 
+});

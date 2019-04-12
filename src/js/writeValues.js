@@ -23,6 +23,9 @@ function processAJAXCalls(object, apiType, elementID, elementClass = "example-ou
 		case "country":
 		valueToWrite = getCountryInfo(object);
 		break;
+		case "register":
+		valueToWrite = getRegsiterToken(object);
+		break;
 		default:
 		valueToWrite = objectToString(object);
 	};
@@ -61,7 +64,7 @@ function getNumbers(string){
 	return numbersParagraph;
 }
 
-function getCountryInfo(object) {
+function getCountryInfo(object){
 	let divTag = createDiv("response-container");
 	let flagImg = createImg(object[0].flag);
 	let countryText = `The country is ${object[0].name} and the capital is ${object[0].capital}`;
@@ -69,6 +72,11 @@ function getCountryInfo(object) {
 	divTag.appendChild(flagImg);
 	divTag.appendChild(contryInfo);
 	return divTag;
+}
+
+function getRegsiterToken(object){
+	let regsiterToken = createParagraph(`The register token is ${object.token}`);
+	return regsiterToken;
 }
 
 export {addExampleValueToElement, processAJAXCalls};

@@ -16,10 +16,10 @@
 		<p class="code-reason">Use MAP when you want to perform the same action on every item in an array</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const mapNumbers = [1, 2, 3, 4, 5];<br />
 				let mapValue = mapNumbers.map(number => number * number);
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -30,10 +30,10 @@
 		<p class="code-reason">Use FILTER when you only want items that match a certain criteria</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const filterThings = ['desk', 'chair', 5, 'backpack', 3.14, 100];<br />
 				let filterOnlyNumbers = filterThings.filter(thing => typeof thing === 'number');
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -44,19 +44,19 @@
 		<p class="code-reason">Use REDUCE when you want to use the values in an existing array to create something new</p>
 		<div class="code-snippet-container example1">
 			<p class="code-snippet-example">Example 1:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const reduceNameArray = ['adam', 'nancy', 'damain', 'ramona', 'evan', 'wendy'];<br />
 				let reduceValue = reduceNameArray.reduce((acc, currVal) => { return acc + currVal[0] }, "");
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
 		<div class="code-snippet-container example2">
 			<p class="code-snippet-example">Example 2:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const reduceNums = [1, 2, 3, 4,];<br />
 				let reduceSum = reduceNums.reduce((acc, val) => acc + val, 1);
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>
 		</div>
@@ -67,10 +67,10 @@
 		<p class="code-reason">Use FOREACH when you want to run something on each element in an array</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">	
+			<code class="code-snippet">	
 				let foreachNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br />
 				foreachNums.forEach( (num, i, array) => {if (num%2 == 0) array.splice(i,1)});
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -81,10 +81,10 @@
 		<p class="code-reason">Use EVERY if you want to return a boolean. Every will check every element and will evaluate to true if every element evaluates to true.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const everyNums = [1, 50, 75, 200, 350, 525, 1000];<br />
 				let everyNumsValue = everyNums.every(num => num > 0);	
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -95,24 +95,24 @@
 		<p class="code-reason">Use SORT to sort elements or numbers</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				let sortNums = [23, 22, 4, 16, 8, 42, 15];
 				sortNums.sort();
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				//We can also reverse the sort<br />
 				sortNums.reverse();
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output1-reversed"></p>
 			<p class="code-snippet-example">Example 2:</p>
-			<p class="code-snippet">
-				//To sort numbers we need to use a compare function
-				let sortNums = [23, 22, 4, 16, 8, 42, 15];
+			<code class="code-snippet">
+				//To sort numbers we need to use a compare function<br />
+				let sortNums = [23, 22, 4, 16, 8, 42, 15];<br />
 				sortNums.sort((a, b) => a - b);
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>
 		</div>
@@ -123,7 +123,7 @@
 		<p class="code-reason">One way would have been to write a for loop and do a check with indexOf though we with the updated JS code as of ES6 we can use a filter and include method.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				//Arrays to check <br />
 				const nondupsList1 = [1,2,3,4,5,6,7];<br />
 				const nondupsList2 = [1,2,3,4];<br />
@@ -135,13 +135,13 @@
 						<span class="indent-40">nondupsMatchLoop.push(nondupsList1[k]);</span><br />
 					<span class="indent-20">}</span><br />
 				} 
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				//Using Filter and Include methods:<br />
 				let nondupsMatchFilter = nondupsList1.filter(val => !nondupsList2.includes(val));
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>
 		</div>
@@ -157,7 +157,7 @@
 		<p class="code-reason">This is a function to take the keys in an Object and turn them into an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const playObject = {<br />
 				<span class="indent-20">key1: "value1",</span><br />
 				<span class="indent-20">key2: "value2",</span><br />
@@ -172,7 +172,7 @@
 					<span class="indent-20">}</span><br />
 					<span class="indent-20">return keyArray;</span><br />
 				}
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -183,7 +183,7 @@
 		<p class="code-reason">This is a function to take the values in an Object and turn them into an array</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const playObject = {<br />
 				<span class="indent-20">key1: "value1",</span><br />
 				<span class="indent-20">key2: "value2",</span><br />
@@ -198,7 +198,7 @@
 					<span class="indent-20">}</span><br />
 					<span class="indent-20">return valueArray;</span><br />
 				}
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -213,7 +213,7 @@
 		<p class="code-reason">Original AJAX request</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 				const xhr = new XMLHttpRequest;<br />
 				const url = "https://api.chucknorris.io/jokes/random";<br />
 				xhr.responseType = "json";<br />
@@ -229,7 +229,7 @@
 				};<br />
 				xhr.open('GET', url, true);<br />
 				xhr.send();
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -245,7 +245,7 @@
 		<p class="code-reason">FETCH request. This is a sample GET request. This new method allows for an easy asynchronously way to get resources from the network.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			let fetchURL = "https://taco-randomizer.herokuapp.com/random/";<br />
 			fetch(fetchURL)<br />
 			.then(response => {<br />
@@ -258,7 +258,7 @@
 			.catch(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -269,7 +269,7 @@
 		<p class="code-reason">FETCH POST request. This is a sample POST request. This new method allows for an easy asynchronously way to get resources from the network.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			let fetchPOSTurl = "https://reqres.in/api/users";<br />
 			let fetchPostData = {<br />
 				<span class="indent-20">method: 'POST',</span><br />
@@ -289,7 +289,7 @@
 			.catch(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -300,7 +300,7 @@
 		<p class="code-reason">FETCH Get request with async/await. This is a sample Get request using async/await.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			const fetchAsync = async (fetchAsynURL) => {<br />
 				<span class="indent-20">const response = await fetch(fetchAsynURL);</span><br />
 				<span class="indent-20">if (!response.ok) {</span><br />
@@ -316,7 +316,7 @@
 			.catch(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -327,7 +327,7 @@
 		<p class="code-reason">FETCH POST request with async/await. This is a sample Post request using async/await.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			const fetchAsyncPOST = async (fetchAsyncPOSTURL, options) => {<br />
 				<span class="indent-20">const response = await fetch(fetchAsyncPOSTURL, options);</span><br />
 				<span class="indent-20">if (!response.ok) {</span><br />
@@ -350,7 +350,7 @@
 			.catch(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -366,7 +366,7 @@
 		<p class="code-reason">A Promise is an operation that hasn't completed yet but will in the future. Promises allow us to chain .then calls so that we can avoid the <a href="https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)">pyramid of doom</a>.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			let simplePromise = new Promise((resolve, reject) => {<br />
 				<span class="indent-20">let num = Math.random();</span><br />
 				<span class="indent-20">if (num &#60; .5 ){</span><br />
@@ -383,7 +383,7 @@
 				<span class="indent-20">.catch((rejectionReason) => {</span><br />
 					<span class="indent-40">console.log(rejectionReason);</span><br />
 				<span class="indent-20">});</span><br />
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -394,7 +394,7 @@
 		<p class="code-reason">Promise.all will allow you to run multiple promises async and will return once all of them have completed. NOTE: If one promise is rejected (errors out) .all will immediately reject with that error.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example Successful Promise.all:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			Promise.all([<br />
 				<span class="indent-20">new Promise(resolve => setTimeout(() => resolve(1), 3000)),</span><br />
 				<span class="indent-20">new Promise(resolve => setTimeout(() => resolve(2), 2000)),</span><br />
@@ -402,11 +402,11 @@
 			])<br />
 			.then(values => doSomething(values))<br />
 			.catch(error => doSomething(error)); 
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 			<p class="code-snippet-example">Example Unsuccessful Promise.all:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			Promise.all([<br />
 				<span class="indent-20">new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),</span><br />
 				<span class="indent-20">new Promise((resolve, reject) => setTimeout(() => reject(new Error("Whoops!")), 2000)),</span><br />
@@ -414,7 +414,7 @@
 			])<br />
 			.then(values => doSomething(values))<br />
 			.catch(error => doSomething(error));<br />
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>
 		</div>
@@ -425,7 +425,7 @@
 		<p class="code-reason">Promise.race allows you to pass promises like .all BUT .race will return a resolve or reject based on the promise that finishes running first.</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			Promise.race([<br />
 			  <span class="indent-20">new Promise(resolve => setTimeout(() => resolve(1), 3000)),</span><br />
 			  <span class="indent-20">new Promise(resolve => setTimeout(() => resolve(2), 2000)),</span><br />
@@ -433,7 +433,7 @@
 			])<br />
 			.then(values => doSomething(error))<br />
 			.catch(error => doSomething(error));
-			</p>
+			</code>
 			<p class="code-output">Response Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -449,7 +449,7 @@
 		<p class="code-reason">Simple Function to check a persons age</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			function getAge (bday){<br />
 				<span class="indent-20">var today = new Date();</span><br />
 				<span class="indent-20">var birthDate = new Date(bday);</span><br />
@@ -461,7 +461,7 @@
 				<span class="indent-20">doSomething(age);</span><br />
 			}<br />
 			getAge('01/01/1980');
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -472,7 +472,7 @@
 		<p class="code-reason">Simple Function to check a persons name meets the Regex Criteria</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			function checkName(name){<br /> 
 				<span class="indent-20">var regex = /^[a-zA-x]{2,30}$/;</span><br />
 				<span class="indent-20">if( !((name != null && name != undefined) && regex.test(name)) ){</span><br />
@@ -483,7 +483,7 @@
 				<span class="indent-20">}</span><br />
 			}<br />
 			checkName('andrew');
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -494,7 +494,7 @@
 		<p class="code-reason">Simple Function to check that a URL meets the Regex Criteria</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			function checkURL(url){<br />
 				<span class="indent-20">var regex = /^(ftp|http|https):\/\/[^ "]+$/;</span><br />
 				<span class="indent-20">if ( !((url != null && url != undefined) && regex.test(url)) ) {</span><br />
@@ -505,7 +505,7 @@
 				<span class="indent-20">}</span><br />
 			}<br />
 			checkURL('http://www.google.com');
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>

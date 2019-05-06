@@ -19,7 +19,7 @@
 		<p class="code-reason">This is a simple JQuery AJAX Get call.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			$.ajax({<br />
 				<span class="indent-20">url:"https://restcountries.eu/rest/v2/name/cyprus",</span><br />
 				<span class="indent-20">type: "GET",</span><br />
@@ -29,7 +29,7 @@
 			}).fail(function(error){<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -40,13 +40,13 @@
 		<p class="code-reason">JQuery using an updated GET CALL.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			$.get('https://restcountries.eu/rest/v2/name/france', data => {<br />
 				<span class="indent-20">doSomething(data);</span><br />
 			}).fail( error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -57,7 +57,7 @@
 		<p class="code-reason">JQuery using a GETJSON CALL.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			$.getJSON("https://api.funtranslations.com/translate/klingon.json?", {<br />
 				<span class="indent-20">text: "Hello. My name is Inigo Montoya. You killed my father. Prepare to die."</span><br />
 			}).done(data => {<br />
@@ -65,7 +65,7 @@
 			}).fail(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -76,7 +76,7 @@
 		<p class="code-reason">JQuery AJAX POST CALL.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			let JQPostData = {<br />
 				<span class="indent-20">email: "bravelittletoaster@cabin.com",</span><br />
 				<span class="indent-20">password: "robtheowner"</span><br />
@@ -91,7 +91,7 @@
 			}).fail(error => {<br />
 				<span class="indent-20">doSomething(error);</span><br />
 			});
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
@@ -102,7 +102,7 @@
 		<p class="code-reason">JQuery updated AJAX POST CALL.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
-			<p class="code-snippet">
+			<code class="code-snippet">
 			let JQPostData2 = {<br />
 				<span class="indent-20">name: "WinnieThePooh",</span><br />
 				<span class="indent-20">loves: "honey"</span><br />
@@ -112,7 +112,7 @@
 			}).fail( error => {<br />
 				<span class="indent-20">doSomething(error); </span><br />
 			});<br />
-			</p>
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>

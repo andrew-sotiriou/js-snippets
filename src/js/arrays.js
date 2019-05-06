@@ -19,9 +19,21 @@ reduceValue = reduceValue.charAt(0).toUpperCase() + reduceValue.slice(1);
 addValue(reduceValue, "array-reduce-container");
 
 //example 2:
-const reduceNums = [1, 2, 3, 4,];
+const reduceNums = [1, 2, 3, 4];
 let reduceSum = reduceNums.reduce((acc, val) => acc + val, 1);
-addValue(reduceSum, "array-reduce-container","example-output2");
+addValue(reduceSum, "array-reduce-container", "example-output2");
+
+//.REDUCERIGHT
+//example 1:
+const reduceRightNameArray = ['wendy', 'evan', 'ramona', 'damain', 'nancy','adam'];
+let reduceRightValue = reduceRightNameArray.reduceRight((acc, currVal) => { return acc + currVal[0] }, "");
+reduceRightValue = reduceRightValue.charAt(0).toUpperCase() + reduceRightValue.slice(1);
+addValue(reduceRightValue, "array-reduce-right-container");
+
+//example 2:
+const reduceRightNums = [1, 2, 3, 4];
+let reduceRightSum = reduceNums.reduce((acc, val) => acc + val, 100);
+addValue(reduceRightSum, "array-reduce-right-container", "example-output2");
 
 //FOREACH
 let foreachNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

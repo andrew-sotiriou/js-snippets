@@ -54,8 +54,31 @@
 		<div class="code-snippet-container example2">
 			<p class="code-snippet-example">Example 2:</p>
 			<code class="code-snippet">
-				const reduceNums = [1, 2, 3, 4,];<br />
+				const reduceNums = [1, 2, 3, 4];<br />
 				let reduceSum = reduceNums.reduce((acc, val) => acc + val, 1);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output2"></p>
+		</div>
+	</div>
+
+	<div id="array-reduce-right-container" class="code-container">
+		<p class="code-title">Reduce Right</p>
+		<p class="code-reason">Use REDUCERIGHT when you want to use the values in an existing array to create something new from right to left</p>
+		<div class="code-snippet-container example1">
+			<p class="code-snippet-example">Example 1:</p>
+			<code class="code-snippet">
+				const reduceRightNameArray = ['wendy', 'evan', 'ramona', 'damain', 'nancy','adam'];<br />
+				let reduceRightValue = reduceRightNameArray.reduceRight((acc, currVal) => { return acc + currVal[0] }, "");
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+		<div class="code-snippet-container example2">
+			<p class="code-snippet-example">Example 2:</p>
+			<code class="code-snippet">
+				const reduceRightNums = [1, 2, 3, 4];<br />
+				let reduceRightSum = reduceNums.reduce((acc, val) => acc + val, 100);
 			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output2"></p>

@@ -38,12 +38,12 @@ let JQPostData = {
 };
 
 $.ajax({
-	url: "https://reqres.in/api/register",
+	url: "https://reqres.in/api/users",
 	type: "POST",
 	dataType: 'json',
 	data: JQPostData,
 }).done(data => {
-	procCall(data, "register", "jquery-post-container");
+	procCall(data, "createUser", "jquery-post-container");
 }).fail(error => {
 	addValue(`${error.responseJSON.status} ${error.responseJSON.message}`, "jquery-post-container"); 
 });

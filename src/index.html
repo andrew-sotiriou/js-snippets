@@ -175,6 +175,85 @@
 <h2 class="section-header">Objects</h2>
 <div class="section-container">
 
+	<div id="object-basics-container" class="code-container">
+		<p class="code-title">Object Basics</p>
+		<p class="code-reason">An Object is Data Type of Javascript.  Objects are used to store key value pair data sets. This data type allows us to store more complex data entities.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				//We have a few ways to create an empty object:<br />
+				//Object Constructor:<br />
+				let playObject = new Object();<br />
+				//Object Literal<br />
+				let playObject = {};<br />
+				//Lets create an object with a user's first name and age<br />
+				let playObject = {<br />
+					<span class="indent-20">name: "Andrew",</span><br />
+					<span class="indent-20">age: 999</span><br />
+				};<br />
+				//We can add new key:value pairs to our objects like this:<br />
+				playObject.coder = true;<br />
+				//We can delete a property by using the delete option:<br />
+				delete playObject.age;<br />
+				//We can also create a property as a string of text<br />
+				//Note: Any KEY phrase with a space must be in quotes, for example:<br />
+				let newPlayObject = {<br />
+					<span class="indent-20">name: "Bart Simpson",</span><br />
+					<span class="indent-20">age: 10,</span><br />
+					<span class="indent-20">"tool of destruction": "slingshot",</span><br />
+				};<br />
+				//To access the values in an object you can use the dot notation:<br />
+				newPlayObject.name; //returns Bart Simpson<br />
+				//If you want to return the value from a key that has spaces you need to use the bracket notation: <br />
+				newPlayObject["tool of destruction"]; //returns slingshot<br />
+			</code>
+		</div>
+	</div>
+
+	<div id="object-forin-container" class="code-container">
+		<p class="code-title">Object Check Keys and For IN Loop</p>
+		<p class="code-reason">We can check objects in various ways and we can iterate through objects using a for in loop</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			//With the below object as an example:<br />
+			let playObject = {<br />
+				<span class="indent-20">name: "Andrew",</span><br />
+				<span class="indent-20">age: 999</span><br />
+			};<br />
+			playObject.name === undefined //returns true since the key name exists<br />
+			playObject.firstName === undefined //returns false since the key firstName does not exists<br />
+			//we can use the "in" operator to check for property existence as well<br />
+			"name" in playObject //returns true<br />
+			"firstName" in playObject //returns false<br />
+			//If we have an object that we want to iterate through each property we can use a for in loop<br />
+			for (let prop in playObject){<br />
+				<span class="indent-20">prop //returns name and age respectively</span><br />
+				<span class="indent-20">playObject[prop] //returns Andrew and 999 respectively</span><br />
+			}		
+			</code>
+		</div>
+	</div>
+
+	<div id="object-cmdc-container" class="code-container">
+		<p class="code-title">Object Clone, Merge and Deep Copy</p>
+		<p class="code-reason">Info on Cloning, Merging and making Deep Copies of Objects</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				const playObject = {<br />
+				<span class="indent-20">key1: "value1",</span><br />
+				<span class="indent-20">key2: "value2",</span><br />
+				<span class="indent-20">key3: "value3",</span><br />
+				<span class="indent-20">key4: "value4",</span><br />
+				<span class="indent-20">key5: "value5"</span><br />
+				}<br />				
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 	<div id="object-objkey-container" class="code-container">
 		<p class="code-title">Object Keys to Array</p>
 		<p class="code-reason">This is a function to take the keys in an Object and turn them into an array</p>

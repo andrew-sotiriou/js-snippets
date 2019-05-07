@@ -6,7 +6,7 @@ const playObject = {
 	key3: "value3",
 	key4: "value4",
 	key5: "value5"
-}
+};
 
 //Object Keys to Array Function
 function objKeyArray(object) {

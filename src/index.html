@@ -236,21 +236,96 @@
 	</div>
 
 	<div id="object-cmdc-container" class="code-container">
-		<p class="code-title">Object Clone, Merge and Deep Copy</p>
-		<p class="code-reason">Info on Cloning, Merging and making Deep Copies of Objects</p>
+		<p class="code-title">Object Existence, Clone, Merge and Deep Copy</p>
+		<p class="code-reason">Info on Existence Check, Cloning, Merging and making Deep Copies of Objects</p>
 		<div class="code-snippet">
 			<p class="code-snippet-example">Example:</p>
 			<code class="code-snippet">
-				const playObject = {<br />
+				let playObject = {<br />
 				<span class="indent-20">key1: "value1",</span><br />
 				<span class="indent-20">key2: "value2",</span><br />
 				<span class="indent-20">key3: "value3",</span><br />
 				<span class="indent-20">key4: "value4",</span><br />
 				<span class="indent-20">key5: "value5"</span><br />
-				}<br />				
+				}<br />
+				//Accessing a non-existent property will return undefined<br />
+				playObject.key6 //will return undefined<br />
+				//We can also check for an object property's existence with "in"<br />
+				"key1" in playObject //will return true<br />
+				//We can create a clone of our original object with a for in loop<br />
+				let cloneObject = {};<br />
+				for (let key in playObject){<br />
+					<span class="indent-20">cloneObject[key] = playObject[key];</span><br />
+				}<br />
+				//now cloneObject is not just a reference to playObject but its own object references<br />
+				//this will allow us to update cloneObject independent of playObject<br />
+				//We can also clone using the assign Method<br />
+				let cloneObj2 = Object.assign({}, playObject);<br />
+				//we can also merge objects using object.assign<br />
+				let mergeObj = Object.assign(playObject, cloneObj2);
+				//the above will merge playObject and cloneObj2 into mergeObj<br />
+				//if your object has multiple levels and we need a deep copy we can't use assign since assign only copies the first level and nested levels are references.<br />
+				//One way to get a deep copy would be to use JSON.parse and stringify:<br />
+				let deepCopyOrigObj = { a: 1, b: 2, c:{d: 3, f: 4} };<br />
+				let deepCopyObj = JSON.parse(JSON.stringify(deepCopyOrigObj));<br />
+				//now we can update deepCopyOrigObj and deepCopyObj independent of each other<br />
 			</code>
-			<p class="code-output">Output:</p>
-			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="object-methods-container" class="code-container">
+		<p class="code-title">Other Object Methods</p>
+		<p class="code-reason">Lets look at some other Object Methods</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			//With the below object as an example:<br />
+			let playObject = {<br />
+				<span class="indent-20">name: "Andrew",</span><br />
+				<span class="indent-20">age: 999</span><br />
+			};<br />
+			//We can use the .entries method to get the key value pair of a specific place in object<br />
+			Object.entries(playObject)[1]; //returns ["age", "999"]<br />
+			//We can freeze on object from being changed, having new properties being added to it, existing properties being removedm etc...<br />
+			//Once you Freeze an object you will be unable to unfreeze the object<br />
+			playObject.name; //returns 'Andrew'<br />
+			Object.freeze(playObject);<br />
+			playObject.name = "Bill";<br />
+			playObject.name; //returns 'Andrew' because the object was frozen<br />
+			//We can check if an object is Frozen with the isFrozen method<br />
+			Object.isFrozen(playObject); //returns true<br />
+			//We can use .Keys to return an objects keys in an array:<br />
+			Object.keys(playObject); //returns an array ["name", "age"]<br />			
+			</code>
+		</div>
+	</div>
+
+	<div id="object-methods-container" class="code-container">
+		<p class="code-title">Object Apply, Call and Bind</p>
+		<p class="code-reason">Lets look at apply, call and bind</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			//With the below object as an example:<br />
+			let playObject = {<br />
+				<span class="indent-20">name: "Andrew",</span><br />
+				<span class="indent-20">age: 999</span><br />
+			};<br />
+			function saySomething(str1, str2){<br />
+				<span class="indent-20">return `${str1}, ${this.name} you are ${this.age}. ${str2}`;</span><br />
+			}<br />
+			//.Call method allows you to call a function and pass over a new value for this<br />
+			//it allows a function belonging to one object to be called for a different object<br />
+			//.Call will allows you to inherit a previous method in another object<br />
+			saySomething.call(playObject, "Hi", "Boom!");<br />
+			//The above will return: Hi, Andrew you are 999. Boom!<br />
+			//.Apply is simliar to .Call except that you will pass over the arguments as an array<br />
+			saySomething.apply(playObject, ["Hello", "Sugar!"]);<br />
+			//The above will return: Hello, Andrew you are 999. Sugar!<br />
+			//.Bind will create a new function that has the 'this' keyword set to the value provided<br />
+			let boundObj = saySomething.bind(playObject);<br />
+			boundObj("Welcome", "GET IN MY BELLY!");<br />
+			//The above will return: Welcome, Andrew you are 999. GET IN MY BELLY!
 		</div>
 	</div>
 

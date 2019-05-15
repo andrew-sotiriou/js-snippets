@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     main: './src/js/index.js',
-    jquery: './src/js/jquery.js'
+    jquery: './src/js/jquery.js',
+    htmlFive: './src/js/htmlFive.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,6 +39,12 @@ module.exports = {
       chunks: ['jquery'],
       filename: 'jquery.html',
       template: 'src/jquery.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      chunks: ['htmlFive'],
+      filename: 'htmlFive.html',
+      template: 'src/htmlFive.html'
     }),
   ],
   module: {

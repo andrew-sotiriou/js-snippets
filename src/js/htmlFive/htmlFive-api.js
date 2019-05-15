@@ -97,4 +97,24 @@ window.addEventListener('popstate', function(e) {
 	alert(popStateData);
 });
 
-//
+//Vibration:
+const vibrateMe = document.getElementById("vibrateMe");
+const vibrateSuperMario = document.getElementById("vibrateSuperMario");
+const vibrateVader = document.getElementById("vibrateVader");
+const vibratePacMan = document.getElementById("vibratePacMan");
+
+vibrateMe.addEventListener("click", function() {
+	navigator.vibrate([3000, 2000, 1000]);
+});
+
+vibrateSuperMario.addEventListener("click", function() {
+	navigator.vibrate([125,75,125,275,200,275,125,75,125,275,200,600,200,600]);
+});
+
+vibrateVader.addEventListener("click", function() {
+	navigator.vibrate([500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]);
+});
+
+vibratePacMan.addEventListener("click", function() {
+	navigator.vibrate([200,150,200,150,200,150,200,300,200,150,200,150,200,150,200,300,200,150,200,150,200,150,200,150,300,150,350,150,400]);
+});

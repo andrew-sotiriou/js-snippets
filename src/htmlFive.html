@@ -104,7 +104,7 @@
 			<p class="example-output">
 				<button id="historyBack" class="button orange">Back</button>
 				<button id="historyForward" class="button red">Forward</button>				
-				<button id="historyGo" class="button red">Go(-2)</button>
+				<button id="historyGo" class="button green">Go(-2)</button>
 				<button id="historyRefresh" class="button purple">Go Refresh</button>
 				<button id="historyLength" class="button pink">Session Length</button>
 				<button id="historyReplaceState" class="button grey">Replace State</button>
@@ -120,14 +120,18 @@
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
 			<code class="code-snippet">
-				
+				//We can use navigator.vibrate to access a mobile phones vibration API<br />
+				//If we wanted the phone to vibrate for 1 second we would do:<br />
+				navigator.vibrate(1000);<br />
+				//We can also have the phone vibrate for 3 secs stop for 2 and then vibrate for 1 second<br />
+				navigator.vibrate([300,200,100]]);				
 			</code>
 			<p class="code-output">Example:</p>
 			<p class="example-output">
 				<button id="vibrateMe" class="button orange">vibrateMe</button>
-				<button id="vibrateSuperMario" class="button orange">vibrateSuperMario</button>
-				<button id="vibrateVader" class="button orange">vibrateVader</button>
-				<button id="vibratePacMan" class="button orange">vibratePacMan</button>
+				<button id="vibrateSuperMario" class="button green">vibrateSuperMario</button>
+				<button id="vibrateVader" class="button red">vibrateVader</button>
+				<button id="vibratePacMan" class="button grey">vibratePacMan</button>
 			</p>			
 		</div>
 	</div>

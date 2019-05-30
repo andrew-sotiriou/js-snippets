@@ -118,3 +118,14 @@ vibrateVader.addEventListener("click", function() {
 vibratePacMan.addEventListener("click", function() {
 	navigator.vibrate([200,150,200,150,200,150,200,300,200,150,200,150,200,150,200,300,200,150,200,150,200,150,200,150,300,150,350,150,400]);
 });
+
+//Proximity:
+const proximity = document.getElementById("proximity");
+
+proximity.addEventListener("click", function() {
+	window.addEventListener('userproximity', function(event) {
+		if (event.near) {
+			alert('DANGER WILL ROBINSON! MOTION HAS BEEN DETECTED!');
+		}
+	});
+});

@@ -159,6 +159,25 @@
 		</div>
 	</div>
 
+	<div id="html5-proximity-container" class="code-container">
+		<p class="code-title">HTML5 Proximity</p>
+		<p class="code-reason">HTML5 Proximity API allows for access to the proxmity detection hardware. Please note that this API is not fully supported, <a href="https://caniuse.com/#search=vibration">as of writing this it</a>, and only works for Firefox on Android devices.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			//First you need to enable the 'device.sensors.proximity.enabled' to true in the Firefox config settings<br />
+			//The we would add an event listener for userproximity and check if the event.near is true<br />
+			window.addEventListener('userproximity', function(event) {<br />
+			if (event.near) {<br />
+			//do something
+			</code>
+			<p class="code-output">Example:</p>
+			<p class="example-output">
+				<button id="proximity" class="button orange">Enable Proximity</button>
+			</p>			
+		</div>
+	</div>
+
 </div>
 
 </body>

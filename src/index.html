@@ -688,6 +688,41 @@
 		</div>
 	</div>
 
+	<div id="factorial-container" class="code-container">
+		<p class="code-title">Factorial</p>
+		<p class="code-reason">Simple Function to get the factorial of any number</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			function factorial(x) {<br />
+				<span class="indent-20">if (x &#60; 0) return;</span><br />
+				<span class="indent-20">if (x === 0) return 1;</span><br />
+				<span class="indent-20">return x * factorial(x - 1)</span><br />
+			}<br />
+			factorial(3);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="reverse-container" class="code-container">
+		<p class="code-title">Reverse String</p>
+		<p class="code-reason">Simple Function to reverse any string of characters</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			function revStr(str){<br />
+				<span class="indent-20">if (str === '') return '';</span><br />
+				<span class="indent-20">revStr(str.substr(1)) + str[0]);</span><br />
+			}<br />
+			revStr('cat');
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

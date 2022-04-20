@@ -36,3 +36,16 @@ function checkURL(url){
 	} 
 }
 checkURL('http://www.google.com');
+
+function factorial(x) {
+  if (x < 0) return;
+  if (x === 0) return 1;
+  return x * factorial(x - 1);
+}
+addValue(factorial(3), 'factorial-container');
+
+function revStr(str){
+  if (str === '') return '';
+  return revStr(str.substr(1)) + str[0];
+}
+addValue(revStr('cat'), "reverse-container");

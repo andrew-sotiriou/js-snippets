@@ -26,6 +26,9 @@ module.exports = {
     https: false,
     open: true
   },
+  watchOptions: {
+    poll: 10000 // Check for changes every 10 seconds, this is needed for WSL2
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

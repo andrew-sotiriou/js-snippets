@@ -723,6 +723,34 @@
 		</div>
 	</div>
 
+	<div id="largest-size-container" class="code-container">
+		<p class="code-title">Largest Size</p>
+		<p class="code-reason">This will take a string of sizes and find the biggest size</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			let multiSizes =  '360x300,360x310,338x280,300x250,320x50';<br />
+			function getSize(multiSizes) {<br />
+				<span class="indent-20">const sizes = multiSizes.split(',').reduce((acc, currVal) => {</span><br />
+					<span class="indent-40">if (Object.entries(acc).length === 0) {</span><br />
+						<span class="indent-60">const current = currVal.split('x');</span><br />
+						<span class="indent-60">acc.push(current[0], current[1]);</span><br />
+					<span class="indent-40">} else {</span><br />
+						<span class="indent-60">const current = currVal.split('x');</span><br />
+						<span class="indent-60">acc[0] = Number(acc[0]) > Number(current[0]) ? acc[0] : current[0];</span><br />
+						<span class="indent-60">acc[1] = Number(acc[1]) > Number(current[1]) ? acc[1] : current[1];</span><br />
+					<span class="indent-40">}<br />
+					<span class="indent-40">return acc;</span><br />
+				<span class="indent-20">}, []);</span><br />
+				<span class="indent-20">return sizes.join('x');</span><br />
+			}<br />
+			getSize(multiSizes)
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

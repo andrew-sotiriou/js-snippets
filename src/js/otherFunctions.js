@@ -49,3 +49,21 @@ function revStr(str){
   return revStr(str.substr(1)) + str[0];
 }
 addValue(revStr('cat'), "reverse-container");
+
+let multiSizes =  '360x300,360x310,338x280,300x250,320x50';
+function getSize(multiSizes) {
+  const sizes = multiSizes.split(',').reduce((acc, currVal) => {
+    if (Object.entries(acc).length === 0) {
+      const current = currVal.split('x');
+      acc.push(current[0], current[1]);
+    } else {
+      const current = currVal.split('x');
+      acc[0] = Number(acc[0]) > Number(current[0]) ? acc[0] : current[0];
+      acc[1] = Number(acc[1]) > Number(current[1]) ? acc[1] : current[1];
+    }
+    return acc;
+  }, []);
+  return sizes.join('x');
+}
+
+addValue(getSize(multiSizes),"largest-size-container");

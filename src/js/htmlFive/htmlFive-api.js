@@ -129,3 +129,5 @@ proximity.addEventListener("click", function() {
 		}
 	});
 });
+
+//Storage:

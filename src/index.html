@@ -793,7 +793,16 @@
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
 			<code class="code-snippet">
-				const permutations = arr => {<br/>
+				//First we add a default Comparator to be used with the Quick Sort<br/>
+				const defaultComparator = (a, b) => {<br />
+					<span class="indent-20">if (a &#60 b) {</span><br/>
+						<span class="indent-40">return -1;</span><br/>
+					<span class="indent-20">}</span><br/>
+					<span class="indent-20">if (a &#62 b) {</span><br/>
+						<span class="indent-40">return 1;</span><br/>
+					<span class="indent-20">}</span><br/>
+					<span class="indent-20">return 0;</span><br/>
+				};<br />
 					<span class="indent-20">if (arr.length &#60= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr;</span><br/>
 					<span class="indent-20">return arr.reduce(</span><br/>
 						<span class="indent-40">(acc, item, i) =></span><br/>

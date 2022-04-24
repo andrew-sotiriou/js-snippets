@@ -45,11 +45,11 @@
 			<p class="code-snippet-example">Example:</p>
 			<code class="code-snippet">
 				//The first thing we will do is create an image, and two divs for our draggable image to be placed in<br />
-				//To make an item draggable all we have to do is add the draggable attribute and set it to true. Note: Images are inherently draggable and do not need the draggable attribute.
-				div id="dragbox1"<br />
-					<span class="indent-20"> img id="tmnt-michelangelo" src="/images/michelangelo.png" alt="tmnt-michelangelo" title="tmnt-michelangelo" draggable="true" </span><br/>
-				/div<br />
-				div id="dragbox2" /div<br />
+				//To make an item draggable all we have to do is add the draggable attribute and set it to true. Note: Images are inherently draggable and do not need the draggable attribute.<br />
+				&#60div id="dragbox1"&#62<br />
+					<span class="indent-20">&#60img id="tmnt-michelangelo" src="/images/michelangelo.png" alt="tmnt-michelangelo" title="tmnt-michelangelo" draggable="true"&#62 </span><br/>
+				&#60/div&#62<br />
+				&#60div id="dragbox2" &#60/div&#62<br />
 				//There are 3 basic events that need to be added for dragging to work. For the image we need to add 'dragstart', and for the divs we need to add 'drop', and 'dragover'<br />
 				//The dragstart event will say what will happen when the element is dragged<br />
 				//In this case first we call setData which sets the data type and the value of dragged data<br />
@@ -84,7 +84,7 @@
 				};<br />
 				//The dragleave event will fire when the draggable item has left a valid drop zone
 				const dragleave = (event) => {<br />
-				  event.target.style.background = '';
+				  event.target.style.background = '';<br />
 				};<br />
 			</code>
 			<p class="code-output">Example:</p>
@@ -168,8 +168,10 @@
 			//First you need to enable the 'device.sensors.proximity.enabled' to true in the Firefox config settings<br />
 			//Then we would add an event listener for userproximity and check if the event.near is true<br />
 			window.addEventListener('userproximity', function(event) {<br />
-			if (event.near) {<br />
-			//do something
+				<span class="indent-20">if (event.near) {<br />
+					<span class="indent-40">//do something</span><br />
+				<span class="indent-20">}</span><br />
+			}<br />
 			</code>
 			<p class="code-output">Example:</p>
 			<p class="example-output">
@@ -180,15 +182,31 @@
 
 	<div id="html5-storage-container" class="code-container">
 		<p class="code-title">HTML5 Storage</p>
-		<p class="code-reason">HTML5 Storage API allows for access to a particular domain's session or local storage. Session storage is cleared when a page session ends. Local Storage has no expiration and will stay after a user leaves the site.</p>
+		<p class="code-reason">HTML5 Storage API allows for access to a particular domain's session or local storage. Session storage is cleared when a page session ends. Local Storage has no expiration and will stay after a user leaves the site.The Storage API calls can be used for both sessionStorage and localstorage. Let's go through all of the calls using sessionStorage as the example.</p>
 		<div class="code-snippet-container">
 			<p class="code-snippet-example">Example:</p>
 			<code class="code-snippet">
-			????
+				//We can use the length call to find out how many items we have in storage. This will return a number.<br />
+				sessionStorage.length;<br />
+				//We can use the setItem function to set/create a new storage key value pair.<br />
+				sessionStorage.setItem('test', 'test');<br />
+				//We can use the key function to return the nth key in storage. Note that the first item is at the 0 position<br />
+				sessionStorage.key(0);<br />
+				//We can use the getItem function to return the value for that specific key.<br />
+				sessionStorage.getItem('test');<br />
+				//We can use the removeItem function to remove a key value pair from storage based on the key.<br />
+				sessionStorage.removeItem('test');<br />
+				//We can use the clear function to remove all key value pairs from storage.<br />
+				sessionStorage.clear();<br />
 			</code>
 			<p class="code-output">Example:</p>
 			<p class="example-output">
-				????
+				<button id="storageLength" class="button orange">Get Length</button>
+				<button id="storageSetItem" class="button purple">Set Item</button>
+				<button id="storageKey" class="button red">Get Key by Position</button>				
+				<button id="storageGetItem" class="button green">Get Value by Key</button>
+				<button id="storageRemoveItem" class="button pink">Remove Item</button>
+				<button id="storageClear" class="button grey">Clear Storage</button>	
 			</p>			
 		</div>
 	</div>

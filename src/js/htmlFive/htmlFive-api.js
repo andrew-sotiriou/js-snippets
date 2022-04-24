@@ -131,3 +131,44 @@ proximity.addEventListener("click", function() {
 });
 
 //Storage:
+
+const storageLength = document.getElementById("storageLength");
+const storageSetItem = document.getElementById("storageSetItem");
+const storageKey = document.getElementById("storageKey");
+const storageGetItem = document.getElementById("storageGetItem");
+const storageRemoveItem = document.getElementById("storageRemoveItem");
+const storageClear = document.getElementById("storageClear");
+
+storageLength.addEventListener("click", function() {
+	alert(sessionStorage.length);
+});
+
+storageSetItem.addEventListener("click", function() {
+	if (sessionStorage.getItem('ASH') === null) {
+		sessionStorage.setItem('ASH', 'This is my boomstick!');
+	}
+	else if (sessionStorage.getItem('ASH2') === null) {
+		sessionStorage.setItem('ASH2', 'Gimme Some Sugar Baby');
+	}
+	else {
+		sessionStorage.setItem('ASH3', 'GROOVY!');
+	}
+});
+
+storageKey.addEventListener("click", function() {
+	alert(sessionStorage.key(0));
+});
+
+storageGetItem.addEventListener("click", function() {
+	alert(sessionStorage.getItem(sessionStorage.key(0)));
+});
+
+storageRemoveItem.addEventListener("click", function() {
+	sessionStorage.removeItem(sessionStorage.key(0));
+	alert('Check the length now!');
+});
+
+storageClear.addEventListener("click", function() {
+	sessionStorage.clear();
+	alert('Check the length now!');
+});

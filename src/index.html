@@ -751,6 +751,29 @@
 		</div>
 	</div>
 
+	<div id="permutations-container" class="code-container">
+		<p class="code-title">Permutations script</p>
+		<p class="code-reason">This will take an array and output all permutations of the items in the array.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				const permutations = arr => {<br/>
+					<span class="indent-20">if (arr.length &#60= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr;</span><br/>
+					<span class="indent-20">return arr.reduce(</span><br/>
+						<span class="indent-40">(acc, item, i) =></span><br/>
+							<span class="indent-60">acc.concat(</span><br/>
+								<span class="indent-80">permutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [item, ...val,])</span><br/>
+							<span class="indent-60">),</span><br/>
+						<span class="indent-40">[]</span><br/>
+					<span class="indent-20">);</span><br/>
+				};<br/>
+				permutations(['Bill', 'Jim', 'bob', 'ash']);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

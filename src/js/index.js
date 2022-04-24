@@ -11,3 +11,5 @@ import { ajaxCalls } from './ajaxCalls.js';
 import { promises } from './promises.js';
 
 import { functions } from './otherFunctions.js';
+
+import { sorts } from './sorts.js';

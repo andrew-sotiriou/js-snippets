@@ -29,21 +29,17 @@ const quickSort = (unsortedArray, comparator = defaultComparator) => {
 
             // This value is less than the pivot value.
             if (sort === -1) {
-                // If the element just to the right of the split index,
-                //   isn't this element, swap them.
                 if (splitIndex !== i) {
                     const temp = sortedArray[splitIndex];
                     sortedArray[splitIndex] = sortedArray[i];
                     sortedArray[i] = temp;
                 }
 
-                // Move the split index to the right by one,
-                //   denoting an increase in the less-than sub-array size.
+                // Move the split index to the right by one
                 splitIndex++;
             }
 
-        // Leave values that are greater than or equal to
-        //   the pivot value where they are.
+        // Leave values that are greater than or equal to the pivot value where they are.
         }
 
         // Move the pivot value to between the split.
@@ -55,9 +51,8 @@ const quickSort = (unsortedArray, comparator = defaultComparator) => {
         recursiveSort(splitIndex + 1, end);
     };
 
-    // Sort the entire array.
     recursiveSort(0, unsortedArray.length - 1);
     return sortedArray;
 };
-  
-console.log(quickSort([5,5,5,5,1,4,3,5,9,10,467389,998348]));
+const arrayToSort = [5,52,5,28,1,4,3,5,9,10,467389,998348];
+addValue(quickSort(arrayToSort), "quick-sort-container");

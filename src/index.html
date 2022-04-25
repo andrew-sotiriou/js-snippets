@@ -867,5 +867,101 @@
 
 </div>
 
+<h2 class="section-header">Search</h2>
+<div class="section-container">
+
+	<div id="breadth-first-container" class="code-container">
+		<p class="code-title">Breadth First Search</p>
+		<p class="code-reason">This is an example of a Breadth First Search.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			// First we need a tree for the breadth First Search<br />
+			const tree = [<br />
+				<span class="indent-20">{value: 6, left: 1, right: 2},</span><br />
+				<span class="indent-20">{value: 5, left: 3, right: 4},</span><br />
+				<span class="indent-20">{value: 7, left: null, right: 5},</span><br />
+				<span class="indent-20">{value: 3, left: 6, right: null},</span><br />
+				<span class="indent-20">{value: 4, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 9, left: 7, right: 8},</span><br />
+				<span class="indent-20">{value: 2, left: 9, right: null},</span><br />
+				<span class="indent-20">{value: 8, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 10, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 1, left: null, right: null}</span><br />
+			];<br />
+			// Now that we have a tree we can run a Breadth First Search.<br />
+			const breadthFirstSearch = (tree, value) => {<br />
+				<span class="indent-20">let queue = []</span><br />
+				<span class="indent-20">queue.push(tree[0])</span><br />
+				<span class="indent-20">while (queue.length !== 0) {</span><br />
+					<span class="indent-40">for (let i = 0; i &#60 queue.length; i++) {</span><br />
+						<span class="indent-60">let node = queue.shift()</span><br />
+						<span class="indent-60">if (node.value === value) {</span><br />
+							<span class="indent-80">return node;</span><br />
+						<span class="indent-60">}</span><br />
+						<span class="indent-60">if (node.left) {</span><br />
+							<span class="indent-80">queue.push(tree[node.left]);</span><br />
+						<span class="indent-60">}</span><br />
+						<span class="indent-60">if (node.right) {</span><br />
+							<span class="indent-80">queue.push(tree[node.right]);</span><br />
+						<span class="indent-60">}</span><br />
+					<span class="indent-40">}</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">return null;</span><br />
+			}<br />
+			breadthFirstSearch(tree, 6);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
+	<div id="depth-first-container" class="code-container">
+		<p class="code-title">Depth First Search</p>
+		<p class="code-reason">This is an example of a Depth First Search.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			// First we need a tree for the breadth First Search<br />
+			const tree = [<br />
+				<span class="indent-20">{value: 6, left: 1, right: 2},</span><br />
+				<span class="indent-20">{value: 5, left: 3, right: 4},</span><br />
+				<span class="indent-20">{value: 7, left: null, right: 5},</span><br />
+				<span class="indent-20">{value: 3, left: 6, right: null},</span><br />
+				<span class="indent-20">{value: 4, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 9, left: 7, right: 8},</span><br />
+				<span class="indent-20">{value: 2, left: 9, right: null},</span><br />
+				<span class="indent-20">{value: 8, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 10, left: null, right: null},</span><br />
+				<span class="indent-20">{value: 1, left: null, right: null}</span><br />
+			];<br />
+			// Now that we have a tree we can run a Depth First Search.<br />
+			const depthFirstSearch = (tree, value) => {<br />
+				<span class="indent-20">let stack = []</span><br />
+				<span class="indent-20">stack.push(tree[0])</span><br />
+				<span class="indent-20">while (stack.length !== 0) {</span><br />
+					<span class="indent-40">for (let i = 0; i &#60 stack.length; i++) {</span><br />
+						<span class="indent-60">let node = stack.pop();</span><br />
+						<span class="indent-60">if (node.value === value) {</span><br />
+							<span class="indent-80">return node;</span><br />
+						<span class="indent-60">}</span><br />
+						<span class="indent-60">if (node.right) {</span><br />
+							<span class="indent-80">stack.push(tree[node.right]);</span><br />
+						<span class="indent-60">}</span><br />
+						<span class="indent-60">if (node.left) {</span><br />
+							<span class="indent-80">stack.push(tree[node.left]);</span><br />
+						<span class="indent-60">}</span><br />
+					<span class="indent-40">}</span><br />
+				<span class="indent-20">}</span><br />
+				<span class="indent-20">return null;</span><br />
+			}<br />
+			depthFirstSearch(tree, 6);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

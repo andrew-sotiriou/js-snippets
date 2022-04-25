@@ -774,6 +774,31 @@
 		</div>
 	</div>
 
+	<div id="products-except-self-container" class="code-container">
+		<p class="code-title">Product Except Self script</p>
+		<p class="code-reason">Multiples an array by all the numbers in the array except for the one it is on</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			const arrayToMultiply = [2,5,10,2];<br />
+			const productExceptSelf = nums => {<br />
+				<span class="indent-20">let resultArray = [], product;</span><br />
+				<span class="indent-20">arrayToMultiply.forEach( (num, i) => {</span><br />
+					<span class="indent-40">product = 1;</span><br />
+					<span class="indent-40">for(let j = 0; j&#60 nums.length; j++) {</span><br />
+						<span class="indent-60">if(i !== j) product *= nums[j];</span><br />
+					<span class="indent-40">}</span><br />
+					<span class="indent-40">resultArray.push(product);</span><br />
+				<span class="indent-20">});</span><br />
+				<span class="indent-20">return resultArray;</span><br />
+			};<br />
+			productExceptSelf(arrayToMultiply);
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

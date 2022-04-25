@@ -83,3 +83,17 @@ const permutations = arr => {
  };
  console.log(permutations(['Bill', 'Jim', 'bob', 'ash']));
  addValue("Check the Console", "permutations-container");
+
+const arrayToMultiply = [2,5,10,2];
+const productExceptSelf = nums => {
+  let resultArray = [], product;
+  arrayToMultiply.forEach( (num, i) => {
+    product = 1;
+    for(let j = 0; j < nums.length; j++) {
+      if(i !== j) product *= nums[j];
+    }
+    resultArray.push(product);
+  });
+  return resultArray;
+};
+addValue(productExceptSelf(arrayToMultiply), "products-except-self-container");

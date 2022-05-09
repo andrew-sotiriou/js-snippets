@@ -160,6 +160,7 @@
 	</div>
 
 	<div id="array-nondups-container" class="code-container">
+
 		<p class="code-title">Check two arrays for non-duplicates</p>
 		<p class="code-reason">One way would have been to write a for loop and do a check with indexOf though we with the updated JS code as of ES6 we can use a filter and include method.</p>
 		<div class="code-snippet-container">
@@ -398,6 +399,74 @@
 			<p class="example-output"></p>
 		</div>
 	</div>
+</div>
+
+<h2 class="section-header">Maps</h2>
+<div class="section-container">
+
+	<div id="map-basics-container" class="code-container">
+		<p class="code-title">Map Basics</p>
+		<p class="code-reason">A Map is Data Type of Javascript.  A Map holds Key-value pairs and the keys can be any datatype.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				//One way we can create a Map is by calling Map method<br />
+				const newMap = new Map();<br />
+				//This will create an empty Map that we would need to fill<br />
+				//We can also call a Map and set the initial values:<br />
+				const map = new Map([['a', 1], ['b', 2]]);<br />
+				//We can add values to the Map by calling the set method:<br />
+				map.set('c', 3);<br />
+				//We can get the value of a Map key by calling the get method:<br />
+				map.get('a');<br />
+				//This will return 1<br />
+				//Map has a size property which will tell you the sizer of the Map:<br />
+				map.size;<br />
+				//This will return 3 (remember we added 'c' earlier)<br />
+				//We can also delete specific elements from a Map using the delete method:<br />
+				map.delete('b')<br />
+				//This will remove b from our MAP leaving a and c<br />
+				//We can clear our Map using the clear method<br />
+				map.clear();<br />
+				//This will clear our Map so it is empty<br />
+				//If we didnt delete or clear our MAP and used the had method we can check if a key exists as a boolean<br />
+				map.has('a');<br />
+				//Will return true<br />
+				map.has('d');<br />
+				//Would return false since 'd' does not exist in or map<br />
+			</code>
+		</div>
+	</div>
+
+	<div id="map-object-container" class="code-container">
+		<p class="code-title">Map Object</p>
+		<p class="code-reason">Maps are Objects</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				//Since Maps are objects your can use typeof and instanceof on a Map<br />
+				const map = new Map([['a', 1], ['b', 2]]);<br />
+				typeof map;<br />
+				//Will return object<br />
+				map instanceof Map;<br />
+				//Will return true<br />
+				//We can use objects as keys with Maps<br />
+				const map1 = {name: 'map1'};<br />
+				const map2 = {name: 'map2'};<br />
+				const mapping = new Map();<br />
+				mapping.set(map1, 5);<br />
+				mapping.set(map2, 10);<br />
+				mapping.get(map2);</br />
+				//Will return 10<br />
+				//We can also use the methods entries(), keys(), values(), and forEach() on Maps<br />
+				mapping.entries()<br />
+				mapping.keys()<br />
+				mapping.values()<br />
+				mapping.forEach(FUNCTION)<br />
+			</code>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">Network Calls</h2>

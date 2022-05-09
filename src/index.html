@@ -141,6 +141,24 @@
 		</div>
 	</div>
 
+	<div id="array-forof-container" class="code-container">
+		<p class="code-title">FOR...OF</p>
+		<p class="code-reason">Use FOR...OF when you want to iterate over iterable objects (arrays, sets, maps, strings, etc...)</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">	
+				let forOfNums = [1, 2, 3, 4, 5];<br />
+				let forOfReturned = [];<br />
+				for (let num of forOfNums) {<br />
+					<span class="indent-20">forOfReturned.push(num * 10);</span><br />	
+				}<br />
+				// This will return all the values in forOfNums multiplied by 10<br />
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
+
 	<div id="array-nondups-container" class="code-container">
 		<p class="code-title">Check two arrays for non-duplicates</p>
 		<p class="code-reason">One way would have been to write a for loop and do a check with indexOf though we with the updated JS code as of ES6 we can use a filter and include method.</p>

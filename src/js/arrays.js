@@ -56,6 +56,14 @@ let sortNums = [23, 22, 4, 16, 8, 42, 15];
 sortNums.sort((a, b) => a - b);
 addValue(sortNums, "array-sort-container", "example-output2");
 
+//FOREACH
+let forOfNums = [1, 2, 3, 4, 5];
+let forOfReturned = [];
+for (let num of forOfNums) {
+	forOfReturned.push(num * 10);		
+}
+addValue(forOfReturned, "array-forof-container");
+
 //Check Arrays for Non-Dups
 const nondupsList1 = [1,2,3,4,5,6,7];
 const nondupsList2 = [1,2,3,4];

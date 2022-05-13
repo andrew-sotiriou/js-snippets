@@ -886,6 +886,43 @@
 		</div>
 	</div>
 
+	<div id="generator-container" class="code-container">
+		<p class="code-title">Generator Function</p>
+		<p class="code-reason">A Generator Function can "yield" multiple values, oen after another. When you call a generator function it doesn't run the code but instead it will return a generator object.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+			// This is a generator function note the use of * after function</br />
+			function* generator(i) {</br />
+				<span class="indent-20">yield i;</span></br />
+				<span class="indent-20">yield i + 1;</span></br />
+				<span class="indent-20">yield i + 2;</span></br />
+			}</br />
+			const gen = generator(10);</br />
+			// Generator Functions have 1 main method (next) and 2 sub-methods of the main method (value and done)</br />
+			// When the function is called it will execute the nearest yield statement and the value is returned.</br />
+			// next().value is the yielded value</br />
+			// next().done is true if the function code has finished and false if there are still more yields</br />
+			gen.next().value;</br />
+			// will return 10</br />
+			gen.next().value;</br />
+			// will return 11</br />
+			gen.next().done;</br />
+			// will return false</br />
+			gen.next().value;</br />
+			// will return 12</br />
+			gen.next().done;</br />
+			// will return true</br />
+			// We can also loop through the generator:</br />
+			for (const n of gen) {</br />
+				<span class="indent-20">console.log(n);</span><br />
+			}</br />
+			// This will return 10, 11, 12</br />
+			// This is just a simple example of what a generator function can do.
+			</code>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

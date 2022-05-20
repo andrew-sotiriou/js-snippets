@@ -955,10 +955,36 @@
 				let myCar = new Card("Subaru", 2015);<br />
 				// Now myCar can use any of the values/functions created by the Car class<br />
 			</code>
+		</div>
+	</div>
+
+	<div id="get-and-set-container" class="code-container">
+		<p class="code-title">Getters and Setters</p>
+		<p class="code-reason">Getters and Setters allow for assigning and getting computed properties.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				const person = {<br />
+					<span class="indent-20">first: "Launchpad",</span><br />
+					<span class="indent-20"></span>lastName: "McQuack",</span><br />
+					<span class="indent-20"></span>special:"",</span><br />
+					<span class="indent-20"></span>set spec(spec) {</span><br />
+						<span class="indent-40">this.special = spec</span><br />
+					<span class="indent-20">},</span><br />
+					<span class="indent-20">get spec() {</span><br />
+						<span class="indent-40">return this.spec;</span><br />
+					<span class="indent-20">}</span><br />
+				}<br />
+				// This allows us to set special by saying:<br />
+				person.spec = "blathering blatherskite";<br />
+				// We can get special by saying:<br />
+				person.spec<br />
+			</code>
 			<p class="code-output">Output:</p>
 			<p class="example-output"></p>
 		</div>
 	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>

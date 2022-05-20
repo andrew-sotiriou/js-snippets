@@ -923,6 +923,42 @@
 		</div>
 	</div>
 
+	<div id="classes-container" class="code-container">
+		<p class="code-title">Javascript Classes</p>
+		<p class="code-reason">Classes are templates for Javascript Objects. Classes are not objects but they are a template for objects.</p>
+		<div class="code-snippet-container">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				// To create a class use the keyword class<br />
+				// Always add a constructor method<br />
+				class Car {<br />
+					<span class="indent-20">constructor() { ... }</span><br />
+				}<br />
+				// Let's create a car class that has two initial properties of name and year:<br />
+				class Car {<br />
+					<span class="indent-20">constructor(name, year) {</span><br />
+						<span class="indent-40">this.name = name;</span><br />
+						<span class="indent-40">this.year = year;</span><br />
+					<span class="indent-20">}</span><br />
+				}<br />
+				// classes can have functions that can return the information<br />
+				class Car {<br />
+					<span class="indent-20">constructor(name, year) {</span><br />
+						<span class="indent-40">this.name = name;</span><br />
+						<span class="indent-40">this.year = year;</span><br />
+						<span class="indent-40">carInfo() {</span><br />
+							<span class="indent-60">return `Car is ${this.name} and this made in ${this.year}`</span><br />
+						<span class="indent-40">}</span><br />
+					<span class="indent-20">}</span><br />
+				}
+				// We can create an instance of car by creating a variable uising the new method:<br />
+				let myCar = new Card("Subaru", 2015);<br />
+				// Now myCar can use any of the values/functions created by the Car class<br />
+			</code>
+			<p class="code-output">Output:</p>
+			<p class="example-output"></p>
+		</div>
+	</div>
 </div>
 
 <h2 class="section-header">HTML5</h2>

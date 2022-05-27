@@ -399,6 +399,32 @@
 			<p class="example-output"></p>
 		</div>
 	</div>
+
+	<div id="optional-chaining-container" class="code-container">
+		<p class="code-title">Optional Chaining</p>
+		<p class="code-reason">The optional chaining operator ?. allows you to check if a property and sub-property in an object has a value. If this catches you will be returned with undefined.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				const dog = {<br/>
+					<span class="indent-20">name: "Scotty",</span><br />
+					<span class="indent-20">breed: "Mixed",</span><br />
+				}<br />
+				// If you wanted to have a catch to see if the dog object had an age associated it without getting an error<br />
+				// you would have used an if statement:<br />
+				if (dog.age !== undefined || dog.age !== null){<br />
+					<span class="indent-20">let someVar = dog.age;</span><br />
+				}<br />
+				// With Optional Chaining we dont have to write that if statement<br />
+				// and write one concise statement<br />
+				let someVar = dog?.age;<br />
+				// This one line will set someVar to either the value of dog.age or undefined if it does not exist<br />
+				// the evaluation stops once it hits the first undefined and will not continue even if there is more<br />
+				let someVar = dog?.age?.birthMonth?.birthDay?.birthYear?.zodiacSign;<br />
+				// This will return undefined at age and not even look at the rest.
+			</code>
+		</div>
+	</div>
 </div>
 
 <h2 class="section-header">Maps</h2>

@@ -1009,6 +1009,30 @@
 		</div>
 	</div>
 
+	<div id="nullish-coalescing-container" class="code-container">
+		<p class="code-title">Nullish Coalescing</p>
+		<p class="code-reason">The nullish coalescing operator ?? is a logical operator will return the left hand side as long as it is not null or undefined otherwise it will return the right hand side.</p>
+		<div class="code-snippet">
+			<p class="code-snippet-example">Example:</p>
+			<code class="code-snippet">
+				// Let's start with some examples:<br />
+				let foo = null ?? "default";<br />
+				// This will return "default"<br />
+				let bar = undefined ?? "Boomstick";<br />
+				// This will return "Boomstick"<br />
+				let baz = 0 ?? "Candy";<br />
+				// This will return 0<br />
+				let zaz = "" ?? "Black";<br />
+				// This will return ""<br />
+				let waz = 42 ?? "Shakes";<br />
+				// This will return 42<br />
+				// This is similar to the || operator in that it is checking for a falsy value<br />
+				// The difference is that ?? is only checking for null or undefined<br />
+				// While || checks for any falsy value: 0, '', NaN, null, or undefined<br />
+			</code>
+		</div>
+	</div>
+
 </div>
 
 <h2 class="section-header">HTML5</h2>
